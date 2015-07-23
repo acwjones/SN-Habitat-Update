@@ -226,6 +226,16 @@ video#bgvid {
     color:#484848;
 }
 
+#base-diagram {
+    position: relative;
+    display: block;
+    width: 960px;
+    height: 450px;
+    background-image:url('../img/bases/base_diagram.png');
+    margin: auto;
+    top: 65%;
+}
+
 /* Slide 3 */
 #slide-3 .bcg {background-image:url('../img/subnautica_coral_base.jpg')}
 #slide-3 .big-picture-copy {  position:absolute; top:10%; left:10%;}
