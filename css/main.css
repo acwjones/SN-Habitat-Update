@@ -202,10 +202,14 @@ video#bgvid {
 
 .big-picture-copy {
     background-color: rgba(50,50,50,0.70);
-    padding: 20px;
+    padding: 15px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+}
+
+.big-picture-copy h3 {
+    margin:0px;
 }
 
 /* Slide 1 */
@@ -214,6 +218,16 @@ video#bgvid {
 #slide-1 #landing-content {
     position: relative;
     z-index: 1;
+}
+
+/* Slide 2 */
+#slide-2 .bcg {
+    background: #D3E1FF;
+    text-align: center;
+}
+
+#slide-2 h2 {
+    color:#484848;
 }
 
 .sea-surface {
@@ -225,61 +239,89 @@ video#bgvid {
     background-image:url('../img/sea_surface.png');
 }
 
-/* Slide 2 */
-#slide-2 .bcg {
+/* Slide 3 */
+#slide-3 .bcg {
     background: #e7ffff;
     background-image:url('../img/sea_background.jpg');
     text-align: center;
-}
-
-#slide-2 h2 {
-    color:#484848;
 }
 
 #base-diagram {
     position: relative;
     display: block;
     width: 960px;
-    height: 450px;
+    height: 500px;
     background-image:url('../img/bases/base_diagram.png');
     margin: auto;
     top: 65%;
 }
 
-/* Slide 3 */
-#slide-3 .bcg {background-image:url('../img/subnautica_coral_base.jpg')}
-#slide-3 .big-picture-copy {  position:absolute; top:10%; left:10%;}
+#base-arrows {
+    position: absolute;
+    top: -245px;
+    left: -360px;
+}
 
+.base-diagram-copy {
+    position: absolute;
+}
+
+.base-diagram-copy h4 {
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: bold;
+}
 
 /* Slide 4 */
-#slide-4 .bcg {
+#slide-4 .bcg {background-image:url('../img/subnautica_grandreef_1.jpg')}
+#slide-4 .big-picture-copy {  position:absolute; top:10%; left:10%;}
+
+#slide-4 .transition {
+    position: absolute;
+    width: 100%;
+    height:50px;
+    top:0px;
+    left:0px;
+    background: rgba(18,59,89,1);
+    background: -moz-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(18,59,89,0) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(18,59,89,1)), color-stop(100%, rgba(18,59,89,0)));
+    background: -webkit-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(18,59,89,0) 100%);
+    background: -o-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(18,59,89,0) 100%);
+    background: -ms-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(18,59,89,0) 100%);
+    background: linear-gradient(to bottom, rgba(18,59,89,1) 0%, rgba(18,59,89,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#113a58', endColorstr='#113b58', GradientType=0 );
+}
+
+
+/* Slide 5 */
+#slide-5 .bcg {
     background: #334D8C;
     text-align: center
 }
 
-#slide-4 h2 {
+#slide-5 h2 {
     color:#ddd;
 }
 
-#slide-4 p {
+#slide-5 p {
     color:#ddd !important;
 }
 
 
 
-/* Slide 5 */
-#slide-5 {position: relative;}
-#slide-5 .bcg {background-image:url('../img/subnautica_kelp_base.jpg')}
-#slide-5 .big-picture-copy {  position:absolute; bottom:10%; right:10%;}
-
-
 /* Slide 6 */
-#slide-6 .bcg {
+#slide-6 {position: relative;}
+#slide-6 .bcg {background-image:url('../img/subnautica_kelp_base.jpg')}
+#slide-6 .big-picture-copy {  position:absolute; bottom:10%; right:10%;}
+
+
+/* Slide 7 */
+#slide-7 .bcg {
     background: #e7ffff;
     text-align: center
 }
 
-#slide-6 h2 {
+#slide-7 h2 {
     color:#484848;
 }
 
