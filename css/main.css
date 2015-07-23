@@ -227,7 +227,7 @@ video#bgvid {
 }
 
 /* Slide 3 */
-#slide-3 .bcg {background-image:url('../img/subnautica_kelp_base.jpg')}
+#slide-3 .bcg {background-image:url('../img/subnautica_coral_base.jpg')}
 #slide-3 .big-picture-copy {  position:absolute; top:10%; left:10%;}
 
 
@@ -249,7 +249,7 @@ video#bgvid {
 
 /* Slide 5 */
 #slide-5 {position: relative;}
-#slide-5 .bcg {background-image:url('../img/subnautica_coral_base.jpg')}
+#slide-5 .bcg {background-image:url('../img/subnautica_kelp_base.jpg')}
 #slide-5 .big-picture-copy {  position:absolute; bottom:10%; right:10%;}
 
 
@@ -338,6 +338,7 @@ video#bgvid {
         position: absolute;
         width: 100%;
         bottom:0px;
+        left:0px;
     }
 
 
