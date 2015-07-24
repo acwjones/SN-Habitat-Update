@@ -11,6 +11,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
 
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -101,8 +102,16 @@
                                 data-bottom="opacity: 1; top: -325px; width: 100%; left: 0;"
                                 data-anchor-target="#slide-1 img">
                                 <img src="img/logos/subnautica_logo_small.png" />
-                                <h2>Habitat Update</h2>
-                            </div>                
+                                <h2>The Habitat Update</h2>
+                            </div>
+
+                            <div id="landing-console" class="big-picture-copy">
+                                Downloading system files . . . Done<br />
+                                Updating PDA OS to v1.1 . . . Done<br />
+                                Upgrading situational analysis suite . . . Done<br />
+                                Re-indexing blueprint database . . . Done<br />
+                                20+ new blueprints added to database.<br />
+                            </div>
 
 			    		</div>
 		        	</div>
@@ -114,9 +123,9 @@
                     <div class="hsContainer">
                         <div class="hsContent">
                             
-                            <div data-center="opacity: 1" data--200-bottom="opacity: 0" data-206-top="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-2 h2">
-                                <h2>Nice Précis of the Update</h2>
-                                <p>Screenshots and lots of nice copy.</p>             
+                            <div data-center="opacity: 1" data--200-bottom="opacity: 0" data-206-top="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-2 h3">
+                                <h3>A software upgrade is available for your Survival PDA.</h3>
+                                <p>This upgrade will add new blueprints to your database, enhance your PDA's ability to read the environment, and better equip you to survive in harsh conditions.</p>             
 
                             </div>
                             
@@ -132,18 +141,33 @@
 		    	<div class="bcg">
 			    	<div class="hsContainer">
 			    		<div class="hsContent">
-				    		<h2 style="margin-bottom:75px;">Sea bases just got bigger.</h2>
+				    		<h3>New Habitat Blueprints Available</h3>
+                            <p>Under factory settings habitat provision was unsatisfactory. While the default modules continue to provide sturdy shelter, they have been augmented with new blueprints providing more advanced structural design, increased work space, enhanced visibility and ease of access.</p>
 
 
                             <div id="base-diagram" >
                                 <img id="base-arrows" src="img/bases/base_arrows.svg" data-center="opacity:1;" data-206-top="opacity: 0;" data-anchor-target="#slide-3" />
-                                <div class="base-diagram-copy" data-center="left: 325px; bottom: -20px;" data-206-top="left: -200px;" data-anchor-target="#slide-3"><h4>Large Compartment</h4></div>
-                                <div class="base-diagram-copy" data-center="right: 70px; top: 10px;" data-206-top="right: -200px;" data-anchor-target="#slide-3"><h4>Vertical Connector</h4></div>
-                                <div class="base-diagram-copy" data-center="right: 0px; bottom: 50px;" data-206-top="right: -200px;" data-anchor-target="#slide-3"><h4>Observatory</h4></div>
-                                <div class="base-diagram-copy" data-center="left: 200px; top: 30px;" data-206-top="left: -200px;" data-anchor-target="#slide-3"><h4>Glass Hallway</h4></div>
-                                <div class="base-diagram-copy" data-center="left: 100px; bottom: 75px;" data-206-top="left: -200px;" data-anchor-target="#slide-3"><h4>Moon Pool</h4></div>
+                                <div class="base-diagram-copy" data-center="left: 140px; top: 30px;" data-206-top="left: -200px;" data-anchor-target="#slide-3">
+                                    <h4>
+                                        <a href="#" id="base-glass-show" class="show-more">▼</a>&nbsp;
+                                        Glass Corridors (I,L)
+                                    </h4>
                                 </div>
-                                
+                                <div class="base-diagram-copy" data-center="left: 325px; bottom: -20px;" data-206-top="left: -200px;" data-anchor-target="#slide-3">
+                                    <h4>
+
+                                        Large Compartment
+                                    </h4>
+                                </div>
+                                <div class="base-diagram-copy" data-center="right: 70px; top: 10px;" data-206-top="right: -200px;" data-anchor-target="#slide-3">
+                                    <h4>Vertical Connector</h4>
+                                </div>
+                                <div class="base-diagram-copy" data-center="right: 0px; bottom: 50px;" data-206-top="right: -200px;" data-anchor-target="#slide-3">
+                                    <h4>Observatory</h4>
+                                </div>
+                                <div class="base-diagram-copy" data-center="left: 100px; bottom: 75px;" data-206-top="left: -200px;" data-anchor-target="#slide-3">
+                                    <h4>Moon Pool</h4>
+                                </div> 
                             </div>
 
                             <!--
@@ -175,27 +199,49 @@
 		    </section>
 
             <section id="slide-4" class="homeSlide">
-            	<div class="bcg" data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 100px;" data-top-bottom="background-position: 50% -100px;" data-anchor-target="#slide-4">
+                <div class="bcg">
+                    <div class="hsContainer">
+                        <div class="hsContent">
+                            <h3>New Utility Blueprints Available</h3>
+                            <p class="big-picture-copy console">Alterra Design Note: I'm worried the default blueprint database is too focused on physical protection. If we're going to keep people alive for more than a few weeks we need to think about their psychological health, and how their habitat will contribute to that.</p>
+                            <div id="room-diagram" >
+                                <img id="room-arrows" src="img/bases/room_arrows.svg" data-center="opacity:1;" data-206-top="opacity: 0;" data-anchor-target="#slide-4" />
+                                <img id="room-door" src="img/bases/room_diagram_door.png" data-center="opacity:0;" data-100-top="opacity: 1;" data-anchor-target="#slide-4"/>
+                                
+                                <div class="base-diagram-copy" data-center="left: -15px; top: 108px;" data-206-top="left: -200px;" data-anchor-target="#slide-4">
+                                    <h4>
+                                        <a href="#" id="base-glass-show" class="show-more">▼</a>&nbsp;
+                                        Small Storage Locker
+                                    </h4>
+                                </div>
+                                <div class="base-diagram-copy" data-center="left: 30px; bottom: 6px;" data-206-top="left: -200px;" data-anchor-target="#slide-4">
+                                    <h4>
+                                        The Aquarium
+                                    </h4>
+                                </div>
+                                <div class="base-diagram-copy" data-center="right: 25px; top: 152px;" data-206-top="right: -200px;" data-anchor-target="#slide-4">
+                                    <h4>Interior Signs</h4>
+                                </div>
+                                <div class="base-diagram-copy" data-center="right: 35px; bottom: 100px;" data-206-top="right: -200px;" data-anchor-target="#slide-4">
+                                    <h4>The Bench</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="slide-5" class="homeSlide">
+            	<div class="bcg" data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 100px;" data-top-bottom="background-position: 50% -100px;" data-anchor-target="#slide-5">
                 	<div class="hsContainer">
                 		<div class="hsContent">
                             <div class="transition"></div>
-                            <div class="big-picture-copy" data-center="opacity: 1" data--200-bottom="opacity: 0" data-206-top="opacity: 1" data-anchor-target="#slide-4 h3">
+                            <div class="big-picture-copy" data-center="opacity: 1" data--200-bottom="opacity: 0" data-206-top="opacity: 1" data-anchor-target="#slide-5 h3">
             		    		<h3>Dive into the Grand Reef.</h3>
             	    	    </div>
                             
                 	   </div>
                 	
-                </div>
-            </section>
-		    
-    		<section id="slide-5" class="homeSlide">
-                <div class="bcg">
-                    <div class="hsContainer">
-                        <div class="hsContent">
-                            <h2 data-center="opacity: 1" data--200-bottom="opacity: 0" data-206-top="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-5 h2">Some really cool stuff here.</h2>
-                            <p data-center="opacity: 1" data--200-bottom="opacity: 0" data-206-top="opacity: 1" data-106-top="opacity: 0" data-anchor-target="#slide-5 h2">Proably some videos and some awesome text, maybe the moonpool if it makes it in! And some sweet transitions too, like pictures focusing in from a blur, it's gonna be fuckin' mega.</p>
-                        </div>
-                    </div>
                 </div>
             </section>
 		    

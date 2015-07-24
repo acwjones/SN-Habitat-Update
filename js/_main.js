@@ -15,7 +15,8 @@
 	$slideTall2 = $('.homeSlideTall2');
 	$body = $('body');
 	htmlbody = $('html,body');
-	var duration = 500;
+	var duration = 650;
+	var scrollDuration = 1000;
 	
     //FadeIn all sections   
 	$body.imagesLoaded( function() {
@@ -168,7 +169,7 @@
 		    // Scroll to the top of a container if it doesn't have custom offset defined
 		    if(typeof customSlideOffset === 'undefined'){
 		        
-		        htmlbody.animate({scrollTop: ($("#slide-"+slideId).offset().top) + 'px'},'slow');
+		        htmlbody.animate({scrollTop: ($("#slide-"+slideId).offset().top) + 'px'}, scrollDuration);
 		        
 		    } else {
 		        
@@ -182,14 +183,13 @@
 				   
 				   //console.log(slideHeight +' '+ customSlideOffset);
 				   
-				   htmlbody.animate({scrollTop: ($("#slide-"+slideId).offset().top + customSlideOffset) + 'px'},'slow');
+				   htmlbody.animate({scrollTop: ($("#slide-"+slideId).offset().top + customSlideOffset) + 'px'}, scrollDuration);
 			        
 		        } else {
 			       
 			       var customSlideOffset = parseInt(customSlideOffset);
 			       
-			       htmlbody.animate({scrollTop: ($("#slide-"+slideId).offset().top + customSlideOffset) + 'px'},'slow');
-			        
+			       htmlbody.animate({scrollTop: ($("#slide-"+slideId).offset().top + customSlideOffset) + 'px'}, scrollDuration);
 		        }
 		    
 		    }

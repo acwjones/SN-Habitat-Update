@@ -175,6 +175,11 @@ main {
 	overflow-x: hidden;
 }
 
+h3 {
+    font-size: 30px;
+
+}
+
 .video_container {
     bottom: 0;
     left: 0;
@@ -208,8 +213,22 @@ video#bgvid {
     border-radius: 5px;
 }
 
+.console {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.9em;
+}
+
 .big-picture-copy h3 {
     margin:0px;
+}
+
+.show-more {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+}
+
+.show-more a:hover {
+    color: rgba(255, 255, 255, 1);
 }
 
 /* Slide 1 */
@@ -220,14 +239,24 @@ video#bgvid {
     z-index: 1;
 }
 
+#landing-console {
+    position: absolute;
+    left:20px;
+    bottom: 20px;
+    text-align: left;
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.9em;
+}
+
 /* Slide 2 */
 #slide-2 .bcg {
     background: #D3E1FF;
     text-align: center;
 }
 
-#slide-2 h2 {
+#slide-2 h3 {
     color:#484848;
+    margin-bottom:30px;
 }
 
 .sea-surface {
@@ -244,6 +273,15 @@ video#bgvid {
     background: #e7ffff;
     background-image:url('../img/sea_background.jpg');
     text-align: center;
+}
+
+#slide-3 h3 {
+    margin-bottom:20px;
+}
+
+#slide-3 p {
+    margin-bottom:10px;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 #base-diagram {
@@ -273,10 +311,48 @@ video#bgvid {
 }
 
 /* Slide 4 */
-#slide-4 .bcg {background-image:url('../img/subnautica_grandreef_1.jpg')}
-#slide-4 .big-picture-copy {  position:absolute; top:10%; left:10%;}
+#slide-4 .bcg {
+    background: rgba(18,59,89,1);
+    background: -moz-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(29,18,87,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(18,59,89,1)), color-stop(100%, rgba(29,18,87,1)));
+    background: -webkit-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(29,18,87,1) 100%);
+    background: -o-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(29,18,87,1) 100%);
+    background: -ms-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(29,18,87,1) 100%);
+    background: linear-gradient(to bottom, rgba(18,59,89,1) 0%, rgba(29,18,87,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#123b59', endColorstr='#1d1257', GradientType=0 );
+    text-align: center
+}
 
-#slide-4 .transition {
+#slide-4 h2 {
+    color:#ddd;
+}
+
+#slide-4 p {
+    color:#ddd !important;
+}
+
+#room-diagram {
+    position: relative;
+    display: block;
+    width: 960px;
+    height: 500px;
+    background-image:url('../img/bases/room_diagram.png');
+    margin: auto;
+    top: 65%;
+}
+
+#room-arrows {
+    position: absolute;
+    top: -245px;
+    left: -360px;
+}
+
+
+/* Slide 5 */
+#slide-5 .bcg {background-image:url('../img/subnautica_grandreef_1.jpg')}
+#slide-5 .big-picture-copy {  position:absolute; top:10%; left:10%;}
+
+#slide-5 .transition {
     position: absolute;
     width: 100%;
     height:50px;
@@ -291,23 +367,6 @@ video#bgvid {
     background: linear-gradient(to bottom, rgba(18,59,89,1) 0%, rgba(18,59,89,0) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#113a58', endColorstr='#113b58', GradientType=0 );
 }
-
-
-/* Slide 5 */
-#slide-5 .bcg {
-    background: #334D8C;
-    text-align: center
-}
-
-#slide-5 h2 {
-    color:#ddd;
-}
-
-#slide-5 p {
-    color:#ddd !important;
-}
-
-
 
 /* Slide 6 */
 #slide-6 {position: relative;}
@@ -351,7 +410,7 @@ video#bgvid {
 		margin-bottom: 12px;
 	}
 	.hsContent p {
-		width: 400px;
+		width: 600px;
 		margin: 0 auto;
 		color: #252525;
 	}
