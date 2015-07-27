@@ -171,6 +171,13 @@ section {
 }
 
 
+.btn-default {
+    color: #333;
+    background-color: #F9BF00;
+    border: 0px;
+    border-bottom: 3px solid #CE9800;
+}
+
 main {
 	overflow-x: hidden;
 }
@@ -272,7 +279,7 @@ video#bgvid {
     vertical-align: middle;
     padding-left: 260px;
     padding-right: 100px;
-        padding-top: 225px;
+    padding-top: 225px;
     margin: auto;
 }
 
