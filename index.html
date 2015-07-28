@@ -8,7 +8,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>Habitat Update - Subnautica</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <meta name="viewport" content="width=device-width initial-scale=1, maximum-scale=1">
 
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400' rel='stylesheet' type='text/css'>
         <link href='http://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
@@ -80,7 +80,7 @@
 
 
         <main>
-
+            <div id="skrollr-body">
 	        <section id="slide-1" class="homeSlide">
 	        	<div class="bcg">
 		        	<div class="hsContainer">
@@ -129,7 +129,7 @@
 
                             </div>
                             
-                            <div class="sea-surface"></div>   
+                            <div class="sea-surface bcg-width"></div>   
 
                         </div>
                     </div>
@@ -138,7 +138,7 @@
             </section>
 		    
 		    <section id="slide-3" class="homeSlide">
-		    	<div class="bcg">
+		    	<div class="bcg" data-anchor-target="#slide-3">
 			    	<div class="hsContainer">
 			    		<div class="hsContent">
 				    		<h3>New Habitat Blueprints Available</h3>
@@ -170,59 +170,49 @@
                                 </div> 
                             </div>
 
-                            <!--
-                            <div class="img-grid" data-center="top:20%; left:25%;" data-start="left:0%;" data-center-top="left:0%;" data-anchor-target="#slide-3">
-                                <img src="img/bases/subnautica_base_generic.jpg" class="img-responsive" alt="subnautica large compartment" />
-                                <h3>Large Compartment</h3>
-                                <p>A large, general purpose compartment. Customise it to your needs with ladders, equipment storage, windows, reinforcements, hatches, and more.</p>
-
-                                <img src="img/bases/subnautica_base_vertical.jpg" class="img-responsive" alt="subnautica vertical connector" />
-                                <h3>Vertical Connector</h3>
-                               <p>Place the vertical connector between other compartments to create a structural link. Build a ladder inside to traverse base decks.</p>
-                            </div>
-     
-
-                            <div class="img-grid" data-center="top:20%; right:25%;" data-start="right:0%;" data-center-top="right:0%;" data-anchor-target="#slide-3">
-                                <img src="img/bases/subnautica_base_observatory.jpg"  class="img-responsive" alt="subnautica observatory" />
-                                <h3>Observatory</h3>
-                                <p>A large, glass enclosed compartment. Enjoy the serenity of the ocean with sweeping 360 degree views.</p>
-           
-                                <img src="img/bases/subnautica_base_glassHallway.jpg"  class="img-responsive" alt="subnautica glass hallway" />
-                                <h3>Glass Hallway</h3>
-                                <p>Build connections between compartments that grant spectacular views of the ocean outside. Also available in L-shaped form!</p>  
-                            </div>
-                            -->
-
 			    		</div>
 		        	</div>
 		    	</div>
 		    </section>
 
             <section id="slide-4" class="homeSlide">
+                <div class="bcg" data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 100px;" data-top-bottom="background-position: 50% -100px;" data-anchor-target="#slide-4">
+                    <div class="hsContainer">
+                        <div class="hsContent">
+                            <div class="transition"></div>
+                            <div class="transition-2"></div>
+                        </div>
+                            
+                    </div>
+                    
+                </div>
+            </section>
+
+            <section id="slide-5" class="homeSlide">
                 <div class="bcg">
                     <div class="hsContainer">
                         <div class="hsContent">
                             <h3>New Utility Blueprints Available</h3>
                             <p class="big-picture-copy console">Alterra Design Note: I'm worried the default blueprint database is too focused on physical protection. If we're going to keep people alive for more than a few weeks we need to think about their psychological health, and how their habitat will contribute to that.</p>
                             <div id="room-diagram" >
-                                <img id="room-arrows" src="img/bases/room_arrows.svg" data-center="opacity:1;" data-206-top="opacity: 0;" data-anchor-target="#slide-4" />
-                                <img id="room-door" src="img/bases/room_diagram_door.png" data-center="opacity:0;" data-100-top="opacity: 1;" data-anchor-target="#slide-4"/>
+                                <img id="room-arrows" src="img/bases/room_arrows.svg" data-center="opacity:1;" data-206-top="opacity: 0;" data-anchor-target="#slide-5" />
+                                <img id="room-door" src="img/bases/room_diagram_door.png" data-center="opacity:0;" data-100-top="opacity: 1;" data-anchor-target="#slide-5"/>
                                 
-                                <div class="base-diagram-copy" data-center="left: -15px; top: 108px;" data-206-top="left: -200px;" data-anchor-target="#slide-4">
+                                <div class="base-diagram-copy" data-center="left: -15px; top: 108px;" data-206-top="left: -200px;" data-anchor-target="#slide-5">
                                     <h4>
                                         <a href="#" id="base-glass-show" class="show-more">▼</a>&nbsp;
                                         Small Storage Locker
                                     </h4>
                                 </div>
-                                <div class="base-diagram-copy" data-center="left: 30px; bottom: 6px;" data-206-top="left: -200px;" data-anchor-target="#slide-4">
+                                <div class="base-diagram-copy" data-center="left: 30px; bottom: 6px;" data-206-top="left: -200px;" data-anchor-target="#slide-5">
                                     <h4>
                                         The Aquarium
                                     </h4>
                                 </div>
-                                <div class="base-diagram-copy" data-center="right: 25px; top: 152px;" data-206-top="right: -200px;" data-anchor-target="#slide-4">
+                                <div class="base-diagram-copy" data-center="right: 25px; top: 152px;" data-206-top="right: -200px;" data-anchor-target="#slide-5">
                                     <h4>Interior Signs</h4>
                                 </div>
-                                <div class="base-diagram-copy" data-center="right: 35px; bottom: 100px;" data-206-top="right: -200px;" data-anchor-target="#slide-4">
+                                <div class="base-diagram-copy" data-center="right: 35px; bottom: 100px;" data-206-top="right: -200px;" data-anchor-target="#slide-5">
                                     <h4>The Bench</h4>
                                 </div>
                             </div>
@@ -231,40 +221,163 @@
                 </div>
             </section>
 
-            <section id="slide-5" class="homeSlide">
-            	<div class="bcg" data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 100px;" data-top-bottom="background-position: 50% -100px;" data-anchor-target="#slide-5">
-                	<div class="hsContainer">
-                		<div class="hsContent">
-                            <div class="transition"></div>
-                            <div class="big-picture-copy" data-center="opacity: 1" data--200-bottom="opacity: 0" data-206-top="opacity: 1" data-anchor-target="#slide-5 h3">
-            		    		<h3>Dive into the Grand Reef.</h3>
-            	    	    </div>
+            <section id="slide-6" class="homeSlide">
+                <div class="bcg" data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 100px;" data-top-bottom="background-position: 50% -100px;" data-anchor-target="#slide-6">
+                    <div class="hsContainer">
+                        <div class="hsContent">
                             
-                	   </div>
-                	
+                            <div class="transition"></div>
+                            </div>
+                            
+                            <div class="big-picture-copy console">
+                                Scanning local biomes with updated parameters . . . Done<br />
+                                Generating comparison report . . . Done<br /><br />
+
+
+                                <strong>
+                                    New Biome Detected: Grand Reef<br />
+                                    Depth: 150m? Unidentified flora detected. Unexploited resources detected. Moonpool Fragments Detected. Danger detected.<br />
+                                </strong>
+                            </div>
+
+                            <div class="transition-2"></div>
+
+                       </div>
+                    
                 </div>
             </section>
 		    
-		    <section id="slide-6" class="homeSlide">
-		    	<div class="bcg" data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 100px;" data-top-bottom="background-position: 50% -100px;" data-anchor-target="#slide-6">
+		    <section id="slide-7" class="homeSlide">
+		    	<div class="bcg">
 			    	<div class="hsContainer">
 				    	<div class="hsContent">
-				    		<div class="big-picture-copy" data-center="opacity: 1" data-bottom-top="opacity: 0" data-anchor-target="#slide-6">
-                                <h2>Check Out this Huge Image</h2>
-                                <p>Man, what a cool game. You should probably buy, like, five copies.<em>At least</em>.</p>
+
+                            <div id="slide-7-title">                        
+                                <h3>New Power Generation Blueprints Available</h3>
+                                <p>Temporary power generators have been recalled and replaced with experimental designs to deliver sustainable electric charge under a variety of extreme conditions.</p>
                             </div>
+
+                            <div class="power-icon-set">
+                            <div class="power-icon-set-inner">
+    				    		<div class="big-picture-copy">
+                                    <img src="img/power/icon.png" alt="Solar Panel" />
+                                    <h4>All-Weather Solar Panel</h4>
+                                    <p>Charges in sunlight, efficiency decreases in low-light conditions. Can store power for later use. </p>
+                                </div>
+
+                                <div class="big-picture-copy">
+                                    <img src="img/power/icon.png" alt="Solar Panel" />
+                                    <h4>Power Transmitter</h4>
+                                    <p>Connects generators and utilities, enabling construction of generators at greater distances from the habitat.</p>
+                                </div>
+
+                                <div class="big-picture-copy">
+                                    <img src="img/power/icon.png" alt="Solar Panel" />
+                                    <h4>Bioreactor</h4>
+                                    <p>Putrefies plant matter to generate heat, which is converted into electric power.</p>
+                                </div>
+                            </div>
+                            </div>
+
+                            <div class="power-icon-set">
+                            <div class="power-icon-set-inner">
+                                <div class="big-picture-copy " data-center="opacity: 1" data-bottom-top="opacity: 0" data-anchor-target="#slide-7">
+                                    <img src="img/power/icon.png" alt="Solar Panel" />
+                                    <h4>Thermal Plant</h4>
+                                    <p>Heat differential between titanium plates generates electric charge in temperatures greater than 15C.</p>
+                                </div>
+
+                                <div class="big-picture-copy " data-center="opacity: 1" data-bottom-top="opacity: 0" data-anchor-target="#slide-7">
+                                    <img src="img/power/icon.png" alt="Solar Panel" />
+                                    <h4>Nuclear Reactor</h4>
+                                    <p>Uranium-powered solution for small colonies. Highly efficient, highly dangerous.</p>
+                                </div>
+                            </div>
+                            </div>
+
 			    		</div>
 			    	</div>
 		    	</div>
 		    	
 		    </section>
 
-            <section id="slide-7" class="homeSlide">
+            <section id="slide-8" class="homeSlide">
+                <div class="bcg" data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 100px;" data-top-bottom="background-position: 50% -100px;" data-anchor-target="#slide-8">
+                    <div class="hsContainer">
+                        <div class="hsContent">
+
+                            <div class="reef-icon-set">
+                            <div class="reef-icon-set-inner">
+                                <div class="big-picture-copy">
+                                    <img src="img/power/icon.png" alt="Solar Panel" />
+                                    <h4>New Metal Detected: Magnetite</h4>
+                                    <p>A material with powerful magnetic properties known to interfere with the scanning capabilities of earlier software versions. Resources needed to fabricate the Compass have been updated.</p>
+                                </div>
+
+                                <div class="big-picture-copy">
+                                    <img src="img/power/icon.png" alt="Solar Panel" />
+                                    <h4>New Organic Material Detected: Creepvine Seed Clusters</h4>
+                                    <p>New applications have been discovered for this common species of kelp. Its seed pods can be processed to produce a basic, water-resistant Lubricant, essential for construction of advanced machinery.</p>
+                                </div>
+
+                                <div class="big-picture-copy">
+                                    <img src="img/power/icon.png" alt="Solar Panel" />
+                                    <h4>Material Recognition Upgraded</h4>
+                                    <p>If a hard-to-find material is available in a biome, this upgrade will help to ensure that repeated mining of rocks will eventually uncover it.</p>
+                                </div>
+                            </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <section id="slide-9" class="homeSlide">
+                <div class="bcg">
+                    <div class="hsContainer">
+                        <div class="hsContent">
+
+                            <div id="slide-9-title">                        
+                                <h3>Habitat Gravity Control Hotfix</h3>
+                                <p>Version 1.0 featured a bug in the habitat gravity control systems. This bug is benign in most environments, but could cause catastrophic failure in habitats at risk of flooding.</p>
+                                <p>In the event of flooding the bug causes liquids to pool and rise at a constant rate of fill regardless of space or elevation, leading to inferior environmental hazard detection, and drowning.</p>
+                                <p>This update disables artificial gravity in water-rich environments. In the event of flooding, liquids should now behave according to the natural laws of physics.</p>
+                                <p>In short, retreating from a hull breach to the uppermost compartment and sealing yourself inside will now effectively delay your demise - but only for a while.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+            </section>
+
+
+            <section id="slide-10" class="homeSlide">
+                <div class="bcg">
+                    <div class="hsContainer">
+                        <div class="hsContent">
+
+                            <div id="slide-10-title">                        
+                                <h3>Flood Management: Bulkhead Doors</h3>
+                                <p>New blueprint available. To help manage the very real threat of drowning the bulkhead reinforces the habitat, and provides effective means of hermetically sealing off different subsections in case of emergency. The following instructional simulator may aid in understanding new flooding scenarios and how to manage them.</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                
+            </section>
+
+            <section id="slide-11" class="homeSlide">
                 <div class="bcg">
                     <div class="hsContainer">
                         <div class="hsContent">
                             
-                            <div class="mail-list-form" data-bottom-top="opacity: 0;" data-center="opacity: 1" data-anchor-target="#slide-7">
+                            <div class="mail-list-form" data-bottom-top="opacity: 0;" data-center="opacity: 1" data-anchor-target="#slide-11">
                                 <h2 class = "text-center">Get development updates</h2>
                                 <p class = "text-center">Sign up to the Subnautica development mailing list! Receive a newsletter when Subnautica receives an update like this one.</p>
 
@@ -307,6 +420,9 @@
                     </div>
                 </div>
             </section>
+-->
+
+        </div>
 		    
 		</main>
 
@@ -317,6 +433,7 @@
         <script src="js/imagesloaded.js"></script>
         <script src="js/waypoints.min.js"></script>
         <script src="js/skrollr.js"></script>
+        <script src="js/skrollr.menu.min.js"></script>
         <script src="js/_main.js"></script>
 
         <!--Google Analytics-->

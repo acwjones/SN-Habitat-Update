@@ -45,7 +45,14 @@
 		        //console.log(data.curTop);
 		    }
 		});
-		
+
+		// Initiate skrollr-menu (fixes mobile device scrolling).
+		/*skrollr.menu.init(s, {
+	        easing: 'outCubic',
+	        animate: true,
+	        duration: 1000
+		});
+		*/
 		// Get window size
 	    winH = $window.height();
 	    
@@ -164,13 +171,18 @@
 			
 			// Custom slide content offset
 		    var customSlideOffset = $("#slide-"+slideId).attr('data-content-offset');
+		    var slidePosition = $("#slide-"+slideId).offset().top;
 		    
 		    
 		    // Scroll to the top of a container if it doesn't have custom offset defined
 		    if(typeof customSlideOffset === 'undefined'){
-		        
-		        htmlbody.animate({scrollTop: ($("#slide-"+slideId).offset().top) + 'px'}, scrollDuration);
-		        
+
+		    	if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {        
+		    		$("#slide-"+slideId)[0].scrollIntoView( true );
+		    	} else {
+		    		htmlbody.animate({scrollTop: slidePosition + 'px'}, scrollDuration); 
+		    	}
+				
 		    } else {
 		        
 		        // Convert percentage 'eg. 25p' into pixels
@@ -183,13 +195,13 @@
 				   
 				   //console.log(slideHeight +' '+ customSlideOffset);
 				   
-				   htmlbody.animate({scrollTop: ($("#slide-"+slideId).offset().top + customSlideOffset) + 'px'}, scrollDuration);
+				   htmlbody.animate({scrollTop: (slidePosition + customSlideOffset) + 'px'}, scrollDuration);
 			        
 		        } else {
 			       
 			       var customSlideOffset = parseInt(customSlideOffset);
 			       
-			       htmlbody.animate({scrollTop: ($("#slide-"+slideId).offset().top + customSlideOffset) + 'px'}, scrollDuration);
+			       htmlbody.animate({scrollTop: (slidePosition + customSlideOffset) + 'px'}, scrollDuration);
 		        }
 		    
 		    }

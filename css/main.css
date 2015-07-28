@@ -203,15 +203,6 @@ video#bgvid {
     z-index: -100;
 }
 
-.bcg {
-	background-position: center center;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
-	background-size: cover;
-	height: 100%;
-	width: 100%;
-}
-
 .big-picture-copy {
     background-color: rgba(50,50,50,0.70);
     padding: 15px;
@@ -290,6 +281,7 @@ video#bgvid {
     bottom:0px;
     left:0px;
     background-image:url('../img/sea_surface.png');
+    background-size: 100% 190px !important;
 }
 
 /* Slide 3 */
@@ -297,6 +289,11 @@ video#bgvid {
     background: #e7ffff;
     background-image:url('../img/sea_background.jpg');
     text-align: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
 }
 
 #slide-3 h3 {
@@ -335,7 +332,44 @@ video#bgvid {
 }
 
 /* Slide 4 */
-#slide-4 .bcg {
+#slide-4 .bcg {background-image:url('../img/subnautica_kelp_base_2.jpg')}
+#slide-4 .big-picture-copy {  position:absolute; top:10%; left:10%;}
+
+#slide-4 .transition {
+    position: absolute;
+    width: 100%;
+    height:100px;
+    top:0px;
+    left:0px;
+    background: rgba(18,59,89,1);
+    background: -moz-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(18,59,89,0) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(18,59,89,1)), color-stop(100%, rgba(18,59,89,0)));
+    background: -webkit-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(18,59,89,0) 100%);
+    background: -o-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(18,59,89,0) 100%);
+    background: -ms-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(18,59,89,0) 100%);
+    background: linear-gradient(to bottom, rgba(18,59,89,1) 0%, rgba(18,59,89,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#113a58', endColorstr='#113b58', GradientType=0 );
+}
+
+#slide-4 .transition-2 {
+    position: absolute;
+    width: 100%;
+    height:100px;
+    bottom:0px;
+    left:0px;
+    background: rgba(18,59,89,1);
+    background: -moz-linear-gradient(top, rgba(18,59,89,0) 0%, rgba(18,59,89,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(18,59,89,0)), color-stop(100%, rgba(18,59,89,1)));
+    background: -webkit-linear-gradient(top, rgba(18,59,89,0) 0%, rgba(18,59,89,1) 100%);
+    background: -o-linear-gradient(top, rgba(18,59,89,0) 0%, rgba(18,59,89,1) 100%);
+    background: -ms-linear-gradient(top, rgba(18,59,89,0) 0%, rgba(18,59,89,0) 100%);
+    background: linear-gradient(to bottom, rgba(18,59,89,0) 0%, rgba(18,59,89,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#113a58', endColorstr='#113b58', GradientType=0 );
+}
+
+
+/* Slide 5 */
+#slide-5 .bcg {
     background: rgba(18,59,89,1);
     background: -moz-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(29,18,87,1) 100%);
     background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(18,59,89,1)), color-stop(100%, rgba(29,18,87,1)));
@@ -347,11 +381,11 @@ video#bgvid {
     text-align: center
 }
 
-#slide-4 h2 {
+#slide-5 h2 {
     color:#ddd;
 }
 
-#slide-4 p {
+#slide-5 p {
     color:#ddd !important;
 }
 
@@ -372,40 +406,212 @@ video#bgvid {
 }
 
 
-/* Slide 5 */
-#slide-5 .bcg {background-image:url('../img/subnautica_grandreef_1.jpg')}
-#slide-5 .big-picture-copy {  position:absolute; top:10%; left:10%;}
+/* Slide 6 */
 
-#slide-5 .transition {
+#slide-6 .bcg {background-image:url('../img/subnautica_grandreef_1.jpg')}
+
+#slide-6 .console {
     position: absolute;
-    width: 100%;
-    height:50px;
-    top:0px;
-    left:0px;
-    background: rgba(18,59,89,1);
-    background: -moz-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(18,59,89,0) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(18,59,89,1)), color-stop(100%, rgba(18,59,89,0)));
-    background: -webkit-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(18,59,89,0) 100%);
-    background: -o-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(18,59,89,0) 100%);
-    background: -ms-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(18,59,89,0) 100%);
-    background: linear-gradient(to bottom, rgba(18,59,89,1) 0%, rgba(18,59,89,0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#113a58', endColorstr='#113b58', GradientType=0 );
+    left:20px;
+    bottom: 75px;
+    width:475px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.7);
 }
 
-/* Slide 6 */
-#slide-6 {position: relative;}
-#slide-6 .bcg {background-image:url('../img/subnautica_kelp_base.jpg')}
-#slide-6 .big-picture-copy {  position:absolute; bottom:10%; right:10%;}
 
+
+#slide-6 .transition {
+    position: absolute;
+    width: 100%;
+    height:100px;
+    top:0px;
+    left:0px;
+    background: rgba(30,18,87,1);
+    background: -moz-linear-gradient(top, rgba(30,18,87,1) 0%, rgba(30,18,87,0) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(30,18,87,1)), color-stop(100%, rgba(30,18,87,0)));
+    background: -webkit-linear-gradient(top, rgba(30,18,87,1) 0%, rgba(30,18,87,0) 100%);
+    background: -o-linear-gradient(top, rgba(30,18,87,1) 0%, rgba(30,18,87,0) 100%);
+    background: -ms-linear-gradient(top, rgba(30,18,87,1) 0%, rgba(30,18,87,0) 100%);
+    background: linear-gradient(to bottom, rgba(30,18,87,1) 0%, rgba(30,18,87,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e1257', endColorstr='#1e1257', GradientType=0 );
+}
+
+#slide-6 .transition-2 {
+    position: absolute;
+    width: 100%;
+    height:100px;
+    bottom:0px;
+    left:0px;
+    background: rgba(30,18,87,0);
+    background: -moz-linear-gradient(top, rgba(30,18,87,0) 0%, rgba(30,18,87,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(30,18,87,0)), color-stop(100%, rgba(30,18,87,1)));
+    background: -webkit-linear-gradient(top, rgba(30,18,87,0) 0%, rgba(30,18,87,1) 100%);
+    background: -o-linear-gradient(top, rgba(30,18,87,0) 0%, rgba(30,18,87,1) 100%);
+    background: -ms-linear-gradient(top, rgba(30,18,87,0) 0%, rgba(30,18,87,1) 100%);
+    background: linear-gradient(to bottom, rgba(30,18,87,0) 0%, rgba(30,18,87,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e1257', endColorstr='#1e1257', GradientType=0 );
+}
 
 /* Slide 7 */
-#slide-7 .bcg {
+#slide-7 { position: relative; }
+#slide-7 .bcg { 
+    background: rgba(30,18,87,1);
+    background: -moz-linear-gradient(top, rgba(30,18,87,1) 0%, rgba(1,13,26,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(30,18,87,1)), color-stop(100%, rgba(1,13,26,1)));
+    background: -webkit-linear-gradient(top, rgba(30,18,87,1) 0%, rgba(1,13,26,1) 100%);
+    background: -o-linear-gradient(top, rgba(30,18,87,1) 0%, rgba(1,13,26,1) 100%);
+    background: -ms-linear-gradient(top, rgba(30,18,87,1) 0%, rgba(1,13,26,1) 100%);
+    background: linear-gradient(to bottom, rgba(30,18,87,1) 0%, rgba(1,13,26,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e1257', endColorstr='#010d1a', GradientType=0 );
+}
+
+#slide-7 .big-picture-copy {  
+    position:relative; 
+    width:300px;
+    background: 0;
+    float: left;
+}
+
+#slide-7 .big-picture-copy h4 {
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: bold;
+
+}
+
+#slide-7 .power-icon-set {
+    float:right;
+    position:relative;
+    left:-50%;
+    margin:40px;
+}
+
+#slide-7 .power-icon-set-inner {
+    position:relative;
+    left:50%;
+}
+
+
+#slide-7 p {
+    width: auto;
+    margin-bottom:10px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#slide-7-title p {
+    width: 600px;
+}
+
+
+/* Slide 8 */
+
+#slide-8 .bcg {background-image:url('../img/subnautica_grandreef_2.jpg')}
+
+#slide-8 .hsContent { vertical-align: bottom; }
+
+#slide-8 .big-picture-copy {  
+    position:relative; 
+    width:300px;
+    float: left;
+    margin:20px;
+}
+
+#slide-8 .big-picture-copy h4 {
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: bold;
+
+}
+
+#slide-8 .reef-icon-set {
+    float:right;
+    position:relative;
+    left:-50%;
+    margin:40px;
+}
+
+#slide-8 .reef-icon-set-inner {
+    position:relative;
+    left:50%;
+}
+
+
+#slide-8 p {
+    width: auto;
+    margin-bottom:10px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Slide 9 */
+
+#slide-9 { position: relative; }
+#slide-9 .bcg { 
+    background: rgba(18,59,89,1);
+    background: -moz-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(29,18,87,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(18,59,89,1)), color-stop(100%, rgba(29,18,87,1)));
+    background: -webkit-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(29,18,87,1) 100%);
+    background: -o-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(29,18,87,1) 100%);
+    background: -ms-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(29,18,87,1) 100%);
+    background: linear-gradient(to bottom, rgba(18,59,89,1) 0%, rgba(29,18,87,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#123b59', endColorstr='#1d1257', GradientType=0 );
+}
+
+
+#slide-9 p {
+    width: 600px;
+    margin-bottom:10px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Slide 10 */
+
+#slide-10 { position: relative; }
+#slide-10 .bcg { 
+    background: rgba(18,59,89,1);
+    background: -moz-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(29,18,87,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(18,59,89,1)), color-stop(100%, rgba(29,18,87,1)));
+    background: -webkit-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(29,18,87,1) 100%);
+    background: -o-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(29,18,87,1) 100%);
+    background: -ms-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(29,18,87,1) 100%);
+    background: linear-gradient(to bottom, rgba(18,59,89,1) 0%, rgba(29,18,87,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#123b59', endColorstr='#1d1257', GradientType=0 );
+}
+
+
+#slide-10 p {
+    width: 600px;
+    margin-bottom:10px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Slide 11 */
+
+#slide-11 .bcg {
     background: #e7ffff;
     text-align: center
 }
 
-#slide-7 h2 {
+#slide-11 h2 {
     color:#484848;
+}
+
+
+
+.bcg {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.bcg-width {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
 }
 
 .hsContainer {
