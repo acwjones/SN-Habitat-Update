@@ -240,11 +240,29 @@ video#bgvid {
 #landing-console {
     position: absolute;
     left:20px;
-    bottom: 20px;
+    bottom: 75px;
     text-align: left;
     font-family: 'Source Code Pro', monospace;
     font-size: 0.9em;
 }
+
+
+#slide-1 .transition-2 {
+    position: absolute;
+    width: 100%;
+    height:100px;
+    bottom:0px;
+    left:0px;
+    background: rgba(211,225,255,0);
+    background: -moz-linear-gradient(top, rgba(211,225,255,0) 0%, rgba(211,225,255,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(211,225,255,0)), color-stop(100%, rgba(211,225,255,1)));
+    background: -webkit-linear-gradient(top, rgba(211,225,255,0) 0%, rgba(211,225,255,1) 100%);
+    background: -o-linear-gradient(top, rgba(211,225,255,0) 0%, rgba(211,225,255,1) 100%);
+    background: -ms-linear-gradient(top, rgba(211,225,255,0) 0%, rgba(211,225,255,1) 100%);
+    background: linear-gradient(to bottom, rgba(211,225,255,0) 0%, rgba(211,225,255,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3e1ff', endColorstr='#d3e1ff', GradientType=0 );
+}
+
 
 /* Slide 2 */
 #slide-2 .bcg {
@@ -543,18 +561,50 @@ video#bgvid {
     color: rgba(255, 255, 255, 0.7);
 }
 
+#slide-8 .transition {
+    position: absolute;
+    width: 100%;
+    height:100px;
+    top:0px;
+    left:0px;
+    background: rgba(1,13,26,1);
+    background: -moz-linear-gradient(top, rgba(1,13,26,1) 0%, rgba(1,13,26,0) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(1,13,26,1)), color-stop(100%, rgba(1,13,26,0)));
+    background: -webkit-linear-gradient(top, rgba(1,13,26,1) 0%, rgba(1,13,26,0) 100%);
+    background: -o-linear-gradient(top, rgba(1,13,26,1) 0%, rgba(1,13,26,0) 100%);
+    background: -ms-linear-gradient(top, rgba(1,13,26,1) 0%, rgba(1,13,26,0) 100%);
+    background: linear-gradient(to bottom, rgba(1,13,26,1) 0%, rgba(1,13,26,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#010d1a', endColorstr='#010d1a', GradientType=0 );
+}
+
+#slide-8 .transition-2 {
+    position: absolute;
+    width: 100%;
+    height:100px;
+    bottom:0px;
+    left:0px;
+    background: rgba(1,13,26,0);
+    background: -moz-linear-gradient(top, rgba(1,13,26,0) 0%, rgba(1,13,26,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(1,13,26,0)), color-stop(100%, rgba(1,13,26,1)));
+    background: -webkit-linear-gradient(top, rgba(1,13,26,0) 0%, rgba(1,13,26,1) 100%);
+    background: -o-linear-gradient(top, rgba(1,13,26,0) 0%, rgba(1,13,26,1) 100%);
+    background: -ms-linear-gradient(top, rgba(1,13,26,0) 0%, rgba(1,13,26,1) 100%);
+    background: linear-gradient(to bottom, rgba(1,13,26,0) 0%, rgba(1,13,26,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#010d1a', endColorstr='#010d1a', GradientType=0 );
+}
+
 /* Slide 9 */
 
 #slide-9 { position: relative; }
 #slide-9 .bcg { 
-    background: rgba(18,59,89,1);
-    background: -moz-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(29,18,87,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(18,59,89,1)), color-stop(100%, rgba(29,18,87,1)));
-    background: -webkit-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(29,18,87,1) 100%);
-    background: -o-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(29,18,87,1) 100%);
-    background: -ms-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(29,18,87,1) 100%);
-    background: linear-gradient(to bottom, rgba(18,59,89,1) 0%, rgba(29,18,87,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#123b59', endColorstr='#1d1257', GradientType=0 );
+    background: rgba(1,13,26,1);
+    background: -moz-linear-gradient(top, rgba(1,13,26,1) 0%, rgba(5,20,20,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(1,13,26,1)), color-stop(100%, rgba(5,20,20,1)));
+    background: -webkit-linear-gradient(top, rgba(1,13,26,1) 0%, rgba(5,20,20,1) 100%);
+    background: -o-linear-gradient(top, rgba(1,13,26,1) 0%, rgba(5,20,20,1) 100%);
+    background: -ms-linear-gradient(top, rgba(1,13,26,1) 0%, rgba(5,20,20,1) 100%);
+    background: linear-gradient(to bottom, rgba(1,13,26,1) 0%, rgba(5,20,20,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#010d1a', endColorstr='#051414', GradientType=0 );
 }
 
 
@@ -568,14 +618,14 @@ video#bgvid {
 
 #slide-10 { position: relative; }
 #slide-10 .bcg { 
-    background: rgba(18,59,89,1);
-    background: -moz-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(29,18,87,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(18,59,89,1)), color-stop(100%, rgba(29,18,87,1)));
-    background: -webkit-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(29,18,87,1) 100%);
-    background: -o-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(29,18,87,1) 100%);
-    background: -ms-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(29,18,87,1) 100%);
-    background: linear-gradient(to bottom, rgba(18,59,89,1) 0%, rgba(29,18,87,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#123b59', endColorstr='#1d1257', GradientType=0 );
+    background: rgba(5,20,21,1);
+    background: -moz-linear-gradient(top, rgba(5,20,21,1) 0%, rgba(0,0,0,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(5,20,21,1)), color-stop(100%, rgba(0,0,0,1)));
+    background: -webkit-linear-gradient(top, rgba(5,20,21,1) 0%, rgba(0,0,0,1) 100%);
+    background: -o-linear-gradient(top, rgba(5,20,21,1) 0%, rgba(0,0,0,1) 100%);
+    background: -ms-linear-gradient(top, rgba(5,20,21,1) 0%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(to bottom, rgba(5,20,21,1) 0%, rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#051415', endColorstr='#000000', GradientType=0 );
 }
 
 
@@ -588,14 +638,18 @@ video#bgvid {
 /* Slide 11 */
 
 #slide-11 .bcg {
-    background: #e7ffff;
+    background: #000
     text-align: center
 }
 
 #slide-11 h2 {
-    color:#484848;
+    color:#fff;
 }
 
+#slide-11 p {
+    margin-bottom:30px;
+    color: rgba(255, 255, 255, 0.7);
+}
 
 
 .bcg {
