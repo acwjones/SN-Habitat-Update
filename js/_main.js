@@ -37,14 +37,16 @@
 	function adjustWindow(){
 		
 		// Init Skrollr
-		var s = skrollr.init({
-		    forceHeight: false,
-		    render: function(data) {
-		    
-		        //Debugging - Log the current scroll position.
-		        //console.log(data.curTop);
-		    }
-		});
+		if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
+		    var s = skrollr.init({
+			    forceHeight: false,
+			    render: function(data) {
+			    
+			        //Debugging - Log the current scroll position.
+			        //console.log(data.curTop);
+			    }
+			});
+		}
 
 		// Initiate skrollr-menu (fixes mobile device scrolling).
 		/*skrollr.menu.init(s, {
@@ -67,7 +69,9 @@
 	    $slideTall2.height(winH*3);
 	    
 	    // Refresh Skrollr after resizing our sections
-	    s.refresh($('.homeSlide'));
+	   	if (s) {
+	   		s.refresh($('.homeSlide'));	
+	   	}
 	    
 	}
 
@@ -179,6 +183,7 @@
 
 		    	if (navigator.userAgent.match(/(iPod|iPhone|iPad|Android)/)) {        
 		    		$("#slide-"+slideId)[0].scrollIntoView( true );
+		    		$activeSlide.text(slideId);
 		    	} else {
 		    		htmlbody.animate({scrollTop: slidePosition + 'px'}, scrollDuration); 
 		    	}
