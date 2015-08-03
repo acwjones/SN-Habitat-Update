@@ -567,6 +567,25 @@ video#bgvid {
     left:50%;
 }
 
+@media (min-height: 601px) and (max-height: 768px) {
+    .power-img  {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-height: 600px) { 
+    .power-img  {
+        width: 75px;
+        height: 75px;
+    }
+
+    #slide-7 .power-icon-set {
+        margin-bottom:0px;
+    }
+
+ }
+
 
 #slide-7 p {
     width: auto;
