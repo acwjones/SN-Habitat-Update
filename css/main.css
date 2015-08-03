@@ -388,12 +388,26 @@ video#bgvid {
         width: 634px;
         height: 330px;
     }
+
+    #base-arrows {
+        width: 1109px;
+        height: 660px;
+        top: -160px;
+        left: -235px;
+    }
 }
 
 @media (max-height: 600px) { 
     #base-diagram {
         width: 550px;
         height: 286px;
+    }
+
+    #base-arrows {
+        width: 958px;
+        height: 570px;
+        top: -140px;
+        left: -205px;
     }
 
  }
@@ -481,12 +495,26 @@ video#bgvid {
         width: 634px;
         height: 330px;
     }
+
+    #room-arrows {
+        width: 1109px;
+        height: 660px;
+        top: -160px;
+        left: -235px;
+    }
 }
 
 @media (max-height: 600px) { 
     #room-diagram, #room-door  {
         width: 550px;
         height: 286px;
+    }
+
+    #room-arrows {
+        width: 958px;
+        height: 570px;
+        top: -140px;
+        left: -205px;
     }
 
  }
@@ -872,6 +900,12 @@ video#bgvid {
 
     .modalDialog p {
         width:auto;
+    }
+
+     .modalDialog img {
+        border: 1px solid #000;
+        margin-top:20px;
+        margin-bottom: 20px;
     }
 
     .close-modal {
