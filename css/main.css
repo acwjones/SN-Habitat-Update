@@ -245,6 +245,10 @@ video#bgvid {
     z-index: 1;
 }
 
+#landing-content img {
+    margin-bottom:20px;
+}
+
 #landing-console {
     position: absolute;
     left:20px;
