@@ -35,40 +35,34 @@
 	});
 	
 	function adjustWindow(){
+
+		winH = $window.height();
+		winW = $window.width();
 		
 		// Init Skrollr
 		if(!(/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)){
-		    var s = skrollr.init({
-			    forceHeight: false,
-			    render: function(data) {
-			    
-			        //Debugging - Log the current scroll position.
-			        //console.log(data.curTop);
-			    }
-			});
+		    
+			if (winH > 768 && winW > 768) {
+				var s = skrollr.init({
+				    forceHeight: false,
+				    render: function(data) {
+				    
+				        //Debugging - Log the current scroll position.
+				        //console.log(data.curTop);
+				    }
+				});
+			}
+		    
 		}
 
-		// Initiate skrollr-menu (fixes mobile device scrolling).
-		/*skrollr.menu.init(s, {
-	        easing: 'outCubic',
-	        animate: true,
-	        duration: 1000
-		});
-		*/
-		// Get window size
-	    winH = $window.height();
-	    
-	    // Keep minimum height 550
 	    if(winH <= 550) {
 			winH = 550;
 		} 
 	    
-	    // Resize our slides
 	    $slide.height(winH);
 	    $slideTall.height(winH*2);
 	    $slideTall2.height(winH*3);
 	    
-	    // Refresh Skrollr after resizing our sections
 	   	if (s) {
 	   		s.refresh($('.homeSlide'));	
 	   	}

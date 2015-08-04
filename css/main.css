@@ -110,7 +110,7 @@ h2 {
 	background: url('../img/ico_loading.gif') no-repeat center center;
 }
 section {
-	min-width: 960px;
+	
 	opacity: 0;
 }
 .loaded section,
@@ -306,7 +306,7 @@ video#bgvid {
     margin: auto;
 }
 
-@media (min-height: 601px) and (max-height: 768px) {
+@media (min-height: 601px) and (max-height: 768px), (max-width:768px) {
     .pda {
         width: 634px;
         height: 416px;
@@ -383,7 +383,7 @@ video#bgvid {
     left: -360px;
 }
 
-@media (min-height: 601px) and (max-height: 768px) {
+@media (min-height: 601px) and (max-height: 768px), (max-width:768px) {
     #base-diagram {
         width: 634px;
         height: 330px;
@@ -394,6 +394,31 @@ video#bgvid {
         height: 660px;
         top: -160px;
         left: -235px;
+    }
+
+    #base-glass {
+        top: 16px;
+        left: 75px;
+    }
+
+    #base-compartment {
+        top: 316px;
+        left: 159px;
+    }
+
+    #base-vertical {
+        top: 3px;
+        right: -12px;
+    }
+
+    #base-observatory {
+        top: 270px;
+        right: -70px;
+    }
+
+    #base-moonpool {
+        top: 254px;
+        left: 75px;
     }
 }
 
@@ -408,6 +433,31 @@ video#bgvid {
         height: 570px;
         top: -140px;
         left: -205px;
+    }
+
+    #base-glass {
+        top: 10px;
+        left: 45px;
+    }
+
+    #base-compartment {
+        top: 270px;
+        left: 110px;
+    }
+
+    #base-vertical {
+        top: -1px;
+        right: -25px;
+    }
+
+    #base-observatory {
+        top: 230px;
+        right: -70px;
+    }
+
+    #base-moonpool {
+        top: 214px;
+        left: 65px;
     }
 
  }
@@ -490,10 +540,14 @@ video#bgvid {
     left: -360px;
 }
 
-@media (min-height: 601px) and (max-height: 768px) {
+@media (min-height: 601px) and (max-height: 768px), (max-width:768px) {
     #room-diagram, #room-door  {
         width: 634px;
         height: 330px;
+    }
+
+    #room-door {
+        visibility: hidden;
     }
 
     #room-arrows {
@@ -501,6 +555,26 @@ video#bgvid {
         height: 660px;
         top: -160px;
         left: -235px;
+    }
+
+    #utility-locker {
+        top: 68px;
+        left: -55px;
+    }
+
+    #utility-aquarium {
+        top: 300px;
+        left: -15px;
+    }
+
+    #utility-signs {
+        top: 97px;
+        right: -25px;
+    }
+
+    #utility-bench {
+        top: 237px;
+        right: -10px;
     }
 }
 
@@ -510,11 +584,36 @@ video#bgvid {
         height: 286px;
     }
 
+    #room-door {
+        visibility: hidden;
+    }
+
     #room-arrows {
         width: 958px;
         height: 570px;
         top: -140px;
         left: -205px;
+    }
+
+    #utility-locker {
+        top: 55px;
+        left: -75px;
+
+    }
+
+    #utility-aquarium {
+        top: 254px;
+        left: -35px;
+    }
+
+    #utility-signs {
+        top: 80px;
+        right: -30px;
+    }
+
+    #utility-bench {
+        top: 201px;
+        right: -15px;
     }
 
  }
@@ -599,7 +698,7 @@ video#bgvid {
     left:50%;
 }
 
-@media (min-height: 601px) and (max-height: 768px) {
+@media (min-height: 601px) and (max-height: 768px), (max-width: 768px) {
     .power-img  {
         width: 100px;
         height: 100px;
@@ -618,6 +717,18 @@ video#bgvid {
 
  }
 
+
+@media (max-width: 1100px) { 
+    #slide-7 .big-picture-copy {  
+        width: 250px;
+    }
+ }
+
+ @media (max-width: 768px) { 
+    #slide-7 .big-picture-copy {  
+        width: 200px;
+    }
+ }
 
 #slide-7 p {
     width: auto;
@@ -698,8 +809,15 @@ video#bgvid {
     height:100%;
     width:33.333%;
     background-size: cover;
+    background-position: center;
     text-align:center;
     float:left;
+}
+
+@media (max-width: 950px) { 
+    #slide-9 .big-picture-copy {   
+        width:200px; 
+    }
 }
 
 #slide-9 .magnetite {
@@ -896,6 +1014,12 @@ video#bgvid {
         padding: 5px 20px 13px 20px;
         border-radius: 5px;
         background-color: rgba(50,50,50,0.80);
+    }
+
+    @media (max-height: 600px) { 
+        .modalDialog > div {
+            margin: 7.5% auto;
+        }
     }
 
     .modalDialog p {
