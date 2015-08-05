@@ -402,22 +402,22 @@ video#bgvid {
 
     #base-glass {
         top: 16px;
-        left: 75px;
+        left: 65px;
     }
 
     #base-compartment {
         top: 316px;
-        left: 159px;
+        left: 149px;
     }
 
     #base-vertical {
         top: 3px;
-        right: -12px;
+        right: -22px;
     }
 
     #base-observatory {
         top: 270px;
-        right: -70px;
+        right: -80px;
     }
 
     #base-moonpool {
@@ -441,22 +441,22 @@ video#bgvid {
 
     #base-glass {
         top: 10px;
-        left: 45px;
+        left: 35px;
     }
 
     #base-compartment {
         top: 270px;
-        left: 110px;
+        left: 100px;
     }
 
     #base-vertical {
         top: -1px;
-        right: -25px;
+        right: -35px;
     }
 
     #base-observatory {
         top: 230px;
-        right: -70px;
+        right: -80px;
     }
 
     #base-moonpool {
@@ -543,22 +543,22 @@ video#bgvid {
 
     #utility-locker {
         top: 68px;
-        left: -55px;
+        left: -65px;
     }
 
     #utility-aquarium {
         top: 300px;
-        left: -15px;
+        left: -25px;
     }
 
     #utility-signs {
         top: 97px;
-        right: -25px;
+        right: -35px;
     }
 
     #utility-bench {
         top: 237px;
-        right: -10px;
+        right: -20px;
     }
 }
 
@@ -581,23 +581,23 @@ video#bgvid {
 
     #utility-locker {
         top: 55px;
-        left: -75px;
+        left: -85px;
 
     }
 
     #utility-aquarium {
         top: 254px;
-        left: -35px;
+        left: -55px;
     }
 
     #utility-signs {
         top: 80px;
-        right: -30px;
+        right: -40px;
     }
 
     #utility-bench {
         top: 201px;
-        right: -15px;
+        right: -25px;
     }
 
  }
@@ -860,18 +860,35 @@ video#bgvid {
         width:100%;
     }
     #slide-11 p {
-    width: 600px;
-    margin:auto;
-    text-align: center;
-}
+        width: 600px;
+        margin:auto;
+        text-align: center;
+    }
 
  }
 
+ @media (max-height: 600px) { 
+    #bulkhead-gif {
+        display: none;
+    }
+    #slide-11-copy {
+        width:100%;
+    }
+    #slide-11 p {
+        width: 600px;
+        margin:auto;
+        text-align: center;
+        float: inherit;
+    }
+
+}
+
 #flood-sim {
-    width: 900px;
-    height: 430px;
+    width: 790px;
+    height: 350px;
     margin: auto;
     margin-top: 40px;
+    color:#fff !important;
 }
 
 /* Slide 12 */

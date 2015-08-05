@@ -7,8 +7,8 @@ var loaded                  = false;
 var interval                = 1.0 / 30.0;
 var time                    = 0.0;
 
-var xSize                   = 16;
-var ySize                   = 10;
+var xSize                   = 15;
+var ySize                   = 8;
 
 var cellTypeNone            = -1;
 var cellTypeEmpty           = 0;
@@ -16,6 +16,10 @@ var cellTypeCorridor        = 1;
 var cellTypeLeak            = 2;
 var cellTypeDoorShut        = 3;
 var cellTypeDoorOpen        = 4;
+
+var interactModeBuild       = 0;
+var interactModePlaceDoor   = 1;
+var interactModePlaceLeak   = 2;
 
 var noFloodGroup            = -1;
 var noCompartment           = -1;
@@ -29,6 +33,7 @@ var cellDelta               = new Array(xSize * ySize);
 var cellFloodGroup          = new Array(xSize * ySize);
 var cellCompartment         = new Array(xSize * ySize);
 var floodGroupWaterLevel;
+var floodGroupArea;
 var compartmentStatus;
 
 var cellSize                = 40;   // In pixels
@@ -36,10 +41,9 @@ var cellOverlap             = 10;   // In pixels.
 var doorWidth               = 14;   // In pixels.
 
 var controlPressed          = false;
-var leakKeyPressed          = false;
-var placementCellType       = cellTypeCorridor;
+var interactMode            = interactModeBuild;
 
-var maxCompression          = 0.1;
+var maxCompression          = 0.5;
 var leakSpeed               = 4.0;
 var flowRate                = 10.0;
 var bulkheadFlowRate        = 1.0;
@@ -47,7 +51,7 @@ var drainRate               = 1.0 / 60.0;
 var damageFlashFrequency    = 7;
 var damageFlashAmount       = 0.15;
 
-var globalWaterLevel        = 8;
+var globalWaterLevel        = 5.5;
 var equalizeCompartments    = true;
 var showPressure            = false;
 
@@ -336,6 +340,7 @@ function BuildFloodGroups()
         cellFloodGroup[index] = noFloodGroup;
     }
 
+    floodGroupArea = new Array();
     var numFloodGroups = 0;
     for (var y = 0; y < ySize; ++y)
     {
@@ -347,6 +352,7 @@ function BuildFloodGroups()
                 if (area > 0)
                 {
                     ++numFloodGroups;
+                    floodGroupArea.push(area);
                 }
             }
         }
@@ -403,9 +409,17 @@ function ComputeFloodGroupLevels()
         if (cellFloodGroup[index] != noFloodGroup)
         {
             var floodGroupIndex = cellFloodGroup[index];
+            // Averave is logically better, but max gives fewer artifacts.
+            //floodGroupWaterLevel[floodGroupIndex] += cellWaterLevel[index];
             floodGroupWaterLevel[floodGroupIndex] = Math.max(floodGroupWaterLevel[floodGroupIndex], cellWaterLevel[index]);
         }
     }
+    /*
+    for (var index = 0; index < floodGroupWaterLevel.length; ++index)
+    {
+        floodGroupWaterLevel[index] /= floodGroupArea[index];
+    } 
+    */   
 }
 
 function OutsidePressure(y)
@@ -505,8 +519,27 @@ function FloodSimUpdate()
     Render();
 }
 
+function FloodSimOnContextMenu(event)
+{
+    // Block the context menu so we can handle right click in OnMouseDown.
+    event.preventDefault();
+    return false;
+}
+
 function FloodSimOnMouseDown(event)
 {
+
+    // From: http://www.quirksmode.org/js/events_properties.html
+    var rightclick;
+    if (event.which)
+    {
+        rightClick = (event.which == 3);
+    }
+    else if (event.button)
+    {
+        rightClick = (event.button == 2);
+    }
+
     var rect = canvas.getBoundingClientRect();
     var x = Math.floor((event.clientX - rect.left) / cellSize);
     var y = Math.floor((event.clientY - rect.top)  / cellSize);
@@ -518,38 +551,7 @@ function FloodSimOnMouseDown(event)
     {
         var index = x + y * xSize;
 
-
-        /*
-        if (placementCellType == cellTypeNone)
-        {
-            // Interact mode.
-            if (cellType[index] == cellTypeDoorShut)
-            {
-                cellType[index] = cellTypeDoorOpen;
-                rebuildCompartments = true;
-            }
-            else if (cellType[index] == cellTypeDoorOpen)
-            {
-                cellType[index] = cellTypeDoorShut;
-                rebuildCompartments = true;
-            }
-        }
-        else
-        {
-            if (controlPressed)
-            {
-                cellType[index] = cellTypeEmpty;
-                rebuild = true;
-            }
-            else
-            {
-                cellType[index] = placementCellType;
-                rebuild = true;
-            }
-        }
-        */
-
-        if (controlPressed)
+        if (controlPressed || rightClick)
         {
             // Erase mode.
             if (cellType[index] == cellTypeCorridor)
@@ -568,7 +570,7 @@ function FloodSimOnMouseDown(event)
                 cellType[index] = cellTypeCorridor;
             }
         }
-        else
+        else if (interactMode == interactModeBuild)
         {
             // Regular mode.
             if (cellType[index] == cellTypeEmpty)
@@ -595,6 +597,16 @@ function FloodSimOnMouseDown(event)
             {
                 cellType[index] = cellTypeCorridor;
             }
+        }
+        else if (interactMode == interactModePlaceLeak)
+        {
+            cellType[index] = cellTypeLeak;
+            rebuild = true;
+        }
+        else if (interactMode == interactModePlaceDoor)
+        {
+            cellType[index] = cellTypeDoorShut;
+            rebuild = true;
         }
 
     }
@@ -824,10 +836,6 @@ function FloodSimOnKeyDown(event)
     {
         controlPressed = true;
     }
-    else if (event.keyCode == 76)
-    {
-        leakKeyPressed = true;
-    }
 }
 
 function FloodSimOnKeyUp(event)
@@ -836,37 +844,24 @@ function FloodSimOnKeyUp(event)
     {
         controlPressed = false;
     }
-    else if (event.keyCode == 76)
-    {
-        leakKeyPressed = false;
-    }
 }
 
 function SyncToControlsForm()
 {
-    document.getElementById("flood_sim_equalize_compartments").checked = equalizeCompartments;
     document.getElementById("flood_sim_show_pressure").checked = showPressure;
 
-    if (placementCellType == cellTypeCorridor)
+    if (interactMode == interactModeBuild)
     {
-        document.getElementById("flood_sim_place_corridor").checked = true;
+        document.getElementById("flood_sim_build").checked = true;
     }
-    else if (IsDoor(placementCellType))
+    else if (interactMode == interactModePlaceDoor)
     {
         document.getElementById("flood_sim_place_door").checked = true;
     }
-    else if (placementCellType == cellTypeEmpty)
-    {
-        document.getElementById("flood_sim_place_clear").checked = true;
-    }
-    else if (placementCellType == cellTypeLeak)
+    else if (interactMode == interactModePlaceLeak)
     {
         document.getElementById("flood_sim_place_leak").checked = true;
     }
-    else
-    {
-        document.getElementById("flood_sim_interact").checked = true;
-    }    
 
     var globalWaterLevelSlider = document.getElementById("flood_sim_global_water_level");
     globalWaterLevelSlider.value = globalWaterLevel * (globalWaterLevelSlider.max - globalWaterLevelSlider.min) / ySize + Number(globalWaterLevelSlider.min);
@@ -875,29 +870,20 @@ function SyncToControlsForm()
 
 function SyncFromControlsForm()
 {
-    equalizeCompartments = document.getElementById("flood_sim_equalize_compartments").checked;
-    showPressure         = document.getElementById("flood_sim_show_pressure").checked;
+    showPressure = document.getElementById("flood_sim_show_pressure").checked;
 
-    if (document.getElementById("flood_sim_place_corridor").checked)
+    if (document.getElementById("flood_sim_place_door").checked)
     {
-        placementCellType = cellTypeCorridor;
-    }
-    else if (document.getElementById("flood_sim_place_door").checked)
-    {
-        placementCellType = cellTypeDoorShut;
-    }
-    else if (document.getElementById("flood_sim_place_clear").checked)
-    {
-        placementCellType = cellTypeEmpty;
+        interactMode = interactModePlaceDoor;
     }
     else if (document.getElementById("flood_sim_place_leak").checked)
     {
-        placementCellType = cellTypeLeak;
+        interactMode = interactModePlaceLeak;
     }
     else
     {
         // Interact mode.
-        placementCellType = cellTypeNone;
+        interactMode = interactModeBuild;
     }
 
     var globalWaterLevelSlider = document.getElementById("flood_sim_global_water_level");
@@ -970,6 +956,7 @@ function FloodSimInitialize()
 
     canvas.tabIndex    = 1000; // Force the canvas to get key inputs
     canvas.addEventListener("mousedown", FloodSimOnMouseDown);
+    canvas.addEventListener("contextmenu", FloodSimOnContextMenu);
     canvas.addEventListener("keydown",   FloodSimOnKeyDown);
     canvas.addEventListener("keyup",     FloodSimOnKeyUp);
 
@@ -989,16 +976,14 @@ function FloodSimInitialize()
     // Initial layout.
 
     var layout = "\
-................\
-.....XXXXX......\
-.....X.......X..\
-.....X.......X..\
-.....XXXXXXXXX..\
-..X.......X.....\
-..X.......X.....\
-..XXXXXXDXXLX...\
-................\
-................"
+...............\
+.....XXXXX.....\
+.....X......X..\
+..X..X......X..\
+..X..XXXXXXXX..\
+..X.......X....\
+..XXXXXDXXLX...\
+..............."
     ApplyLayout(layout);
 
     BuildFloodGroups();
