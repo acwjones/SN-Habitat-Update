@@ -235,6 +235,11 @@ video#bgvid {
     box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.6);
 }
 
+.log {
+    width:30px;
+    height:30px;
+}
+
 /* Slide 1 */
 #slide-1 .bcg { background: transparent; }
 
@@ -244,9 +249,13 @@ video#bgvid {
     width: 100%;
 }
 
-#landing-content img {
+.landing-content-img {
     margin-bottom:20px;
     width:100%;
+}
+
+#landing-console-open img {
+    margin-bottom:0px;
 }
 
 #landing-console {
@@ -339,9 +348,17 @@ video#bgvid {
     font-weight: bold;
 }
 
+#slide-3-log {
+    position: relative;
+    z-index: 1000;
+}
+
 /* Slide 4 */
 
-#slide-4 .bcg { background-image:url('../img/subnautica_kelp_base_2.jpg') }
+#slide-4 .bcg { 
+    background-image:url('../img/subnautica_kelp_base_2.jpg');
+     background-size: cover;
+}
 
 #slide-4 .dialog {
     position: absolute;
@@ -353,6 +370,7 @@ video#bgvid {
 /* Slide 5 */
 #slide-5 .bcg {
     background-image:url('../img/concept_grandreef_1.jpg');
+    background-size: cover;
 }
 
 #slide-5 h2 {
@@ -382,7 +400,10 @@ video#bgvid {
 
 /* Slide 6 */
 
-#slide-6 .bcg {background-image:url('../img/subnautica_moonpool_1.jpg')}
+#slide-6 .bcg {
+    background-image:url('../img/subnautica_moonpool_1.jpg');
+    background-size: cover;
+}
 
 
 #slide-6 h3 { margin-bottom: 10px; }
@@ -433,7 +454,10 @@ video#bgvid {
 
 /* Slide 8 */
 
-#slide-8 .bcg {background-image:url('../img/subnautica_grandreef_1.jpg')}
+#slide-8 .bcg {
+    background-image:url('../img/subnautica_grandreef_1.jpg');
+    background-size: cover;
+}
 
 #slide-8 h3 { margin-bottom: 10px; }
 
@@ -531,6 +555,7 @@ video#bgvid {
 #slide-11 { position: relative; }
 #slide-11 .bcg { 
      background-image:url('../img/concept_base_2.jpg');
+     background-size: cover;
 }
 
 #slide-11-copy {
@@ -560,8 +585,9 @@ video#bgvid {
 /* Slide 12 */
 
 #slide-12 .bcg {
-     background-image:url('../img/subnautica_emperor_1.jpg');
-    text-align: center
+    background-image:url('../img/subnautica_emperor_1.jpg');
+    background-size: cover;
+    text-align: center;
 }
 
 #slide-12 h2 {
@@ -593,7 +619,16 @@ video#bgvid {
     background-size: cover;
     height: 100%;
     width: 100%;
+
 }
+
+@media (max-width: @iphone-screen) {
+    .bcg {
+
+        background-attachment: scroll;
+    }
+}
+
 
 .bcg-width {
     background-position: center center;
@@ -720,6 +755,22 @@ video#bgvid {
         margin-bottom: 20px;
     }
 
+    .dialogDialog { 
+        font-family: 'Source Code Pro', monospace;
+        text-align: left;
+    }
+
+    .dialogDialog .scrollme {
+        height:100%;
+         overflow-y:scroll;
+    }
+
+    .dialogDialog p {
+        margin-top:10px;
+        margin-bottom:10px;
+        color:#fff;
+    }
+
     .close-modal {
         background: rgba(100,100,100,0.90);
         color: #FFFFFF;
@@ -763,6 +814,8 @@ video#bgvid {
     }
 
 }
+
+.no-mobile { display:none; }
 
 /* ==========================================================================
    Helper classes
