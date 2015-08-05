@@ -210,11 +210,7 @@ video#bgvid {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-}
-
-.console {
-    font-family: 'Source Code Pro', monospace;
-    font-size: 0.9em;
+    color: #fff;
 }
 
 .big-picture-copy h3 {
@@ -251,28 +247,15 @@ video#bgvid {
 
 #landing-console {
     position: absolute;
-    left:20px;
-    bottom: 75px;
-    text-align: left;
-    font-family: 'Source Code Pro', monospace;
-    font-size: 0.9em;
+    left: 30px;
+    bottom: 30px;    
+    height: 350px;
+    width: 300px;
 }
 
 
-#slide-1 .transition-2 {
-    position: absolute;
-    width: 100%;
-    height:100px;
-    bottom:0px;
-    left:0px;
-    background: rgba(211,225,255,0);
-    background: -moz-linear-gradient(top, rgba(211,225,255,0) 0%, rgba(211,225,255,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(211,225,255,0)), color-stop(100%, rgba(211,225,255,1)));
-    background: -webkit-linear-gradient(top, rgba(211,225,255,0) 0%, rgba(211,225,255,1) 100%);
-    background: -o-linear-gradient(top, rgba(211,225,255,0) 0%, rgba(211,225,255,1) 100%);
-    background: -ms-linear-gradient(top, rgba(211,225,255,0) 0%, rgba(211,225,255,1) 100%);
-    background: linear-gradient(to bottom, rgba(211,225,255,0) 0%, rgba(211,225,255,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d3e1ff', endColorstr='#d3e1ff', GradientType=0 );
+#slide-1 p {
+    color: rgba(255, 255, 255, 0.7);
 }
 
 
@@ -363,6 +346,12 @@ video#bgvid {
 #slide-3 p {
     margin-bottom:10px;
     color: rgba(255, 255, 255, 0.7);
+}
+
+#slide-3 .dialog {
+    position: absolute;
+    left: 30px;
+    top: 82px;    
 }
 
 #base-diagram {
@@ -462,6 +451,12 @@ video#bgvid {
 
  }
 
+ @media (max-width:768px) {
+    #base-diagram {
+        margin-left:-40px;
+    }
+}
+
 
 .base-diagram-copy {
     position: absolute;
@@ -474,39 +469,13 @@ video#bgvid {
 }
 
 /* Slide 4 */
-#slide-4 .bcg {background-image:url('../img/subnautica_kelp_base_2.jpg')}
-#slide-4 .big-picture-copy {  position:absolute; top:10%; left:10%;}
 
-#slide-4 .transition {
-    position: absolute;
-    width: 100%;
-    height:100px;
-    top:0px;
-    left:0px;
-    background: rgba(18,59,89,1);
-    background: -moz-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(18,59,89,0) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(18,59,89,1)), color-stop(100%, rgba(18,59,89,0)));
-    background: -webkit-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(18,59,89,0) 100%);
-    background: -o-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(18,59,89,0) 100%);
-    background: -ms-linear-gradient(top, rgba(18,59,89,1) 0%, rgba(18,59,89,0) 100%);
-    background: linear-gradient(to bottom, rgba(18,59,89,1) 0%, rgba(18,59,89,0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#113a58', endColorstr='#113b58', GradientType=0 );
-}
+#slide-4 .bcg { background-image:url('../img/subnautica_kelp_base_2.jpg') }
 
-#slide-4 .transition-2 {
+#slide-4 .dialog {
     position: absolute;
-    width: 100%;
-    height:100px;
-    bottom:0px;
-    left:0px;
-    background: rgba(18,59,89,1);
-    background: -moz-linear-gradient(top, rgba(18,59,89,0) 0%, rgba(18,59,89,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(18,59,89,0)), color-stop(100%, rgba(18,59,89,1)));
-    background: -webkit-linear-gradient(top, rgba(18,59,89,0) 0%, rgba(18,59,89,1) 100%);
-    background: -o-linear-gradient(top, rgba(18,59,89,0) 0%, rgba(18,59,89,1) 100%);
-    background: -ms-linear-gradient(top, rgba(18,59,89,0) 0%, rgba(18,59,89,0) 100%);
-    background: linear-gradient(to bottom, rgba(18,59,89,0) 0%, rgba(18,59,89,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#113a58', endColorstr='#113b58', GradientType=0 );
+    right: 30px;
+    top: 82px;    
 }
 
 
@@ -621,7 +590,16 @@ video#bgvid {
 
 /* Slide 6 */
 
-#slide-6 .bcg {background-image:url('../img/subnautica_grandreef_1.jpg')}
+#slide-6 .bcg {background-image:url('../img/subnautica_moonpool_1.jpg')}
+
+#slide-6 .hsContent { vertical-align: top; }
+
+#slide-6 .big-picture-copy {  
+    margin:auto;
+    margin-top: 100px; 
+    width: 600px;
+}
+
 
 #slide-6 .console {
     position: absolute;
@@ -632,38 +610,13 @@ video#bgvid {
     color: rgba(255, 255, 255, 0.7);
 }
 
-
-
-#slide-6 .transition {
-    position: absolute;
-    width: 100%;
-    height:100px;
-    top:0px;
-    left:0px;
-    background: rgba(30,18,87,1);
-    background: -moz-linear-gradient(top, rgba(30,18,87,1) 0%, rgba(30,18,87,0) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(30,18,87,1)), color-stop(100%, rgba(30,18,87,0)));
-    background: -webkit-linear-gradient(top, rgba(30,18,87,1) 0%, rgba(30,18,87,0) 100%);
-    background: -o-linear-gradient(top, rgba(30,18,87,1) 0%, rgba(30,18,87,0) 100%);
-    background: -ms-linear-gradient(top, rgba(30,18,87,1) 0%, rgba(30,18,87,0) 100%);
-    background: linear-gradient(to bottom, rgba(30,18,87,1) 0%, rgba(30,18,87,0) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e1257', endColorstr='#1e1257', GradientType=0 );
+#slide-6 h3 { margin-bottom: 10px; }
 }
 
-#slide-6 .transition-2 {
-    position: absolute;
-    width: 100%;
-    height:100px;
-    bottom:0px;
-    left:0px;
-    background: rgba(30,18,87,0);
-    background: -moz-linear-gradient(top, rgba(30,18,87,0) 0%, rgba(30,18,87,1) 100%);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(30,18,87,0)), color-stop(100%, rgba(30,18,87,1)));
-    background: -webkit-linear-gradient(top, rgba(30,18,87,0) 0%, rgba(30,18,87,1) 100%);
-    background: -o-linear-gradient(top, rgba(30,18,87,0) 0%, rgba(30,18,87,1) 100%);
-    background: -ms-linear-gradient(top, rgba(30,18,87,0) 0%, rgba(30,18,87,1) 100%);
-    background: linear-gradient(to bottom, rgba(30,18,87,0) 0%, rgba(30,18,87,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e1257', endColorstr='#1e1257', GradientType=0 );
+#slide-6 p {
+    width: auto;
+    margin-bottom:10px;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 /* Slide 7 */
@@ -672,14 +625,14 @@ video#bgvid {
     background-image:url('../img/sea_background_2.jpg')
 }
 
-#slide-7 .big-picture-copy {  
+#slide-7 .power-copy {  
     position:relative; 
     width:300px;
     background: 0;
     float: left;
 }
 
-#slide-7 .big-picture-copy h4 {
+#slide-7 .power-copy h4 {
     text-transform: uppercase;
     font-size: 0.9em;
     font-weight: bold;
@@ -719,13 +672,13 @@ video#bgvid {
 
 
 @media (max-width: 1100px) { 
-    #slide-7 .big-picture-copy {  
+    #slide-7 .power-copy {  
         width: 250px;
     }
  }
 
  @media (max-width: 768px) { 
-    #slide-7 .big-picture-copy {  
+    #slide-7 .power-copy {  
         width: 200px;
     }
  }
@@ -740,41 +693,31 @@ video#bgvid {
     width: 600px;
 }
 
+#slide-7 .dialog {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;    
+}
+
 /* Slide 8 */
 
-#slide-8 .bcg {background-image:url('../img/subnautica_moonpool_1.jpg')}
+#slide-8 .bcg {background-image:url('../img/subnautica_grandreef_1.jpg')}
 
-#slide-8 .hsContent { vertical-align: bottom; }
+#slide-8 .hsContent { vertical-align: top; }
 
 #slide-8 .big-picture-copy {  
-    position:relative; 
-    width:300px;
-    float: left;
-    margin:20px;
+    margin:auto;
+    margin-top: 100px; 
+    width: 600px;
 }
 
-#slide-8 .big-picture-copy h4 {
-    text-transform: uppercase;
-    font-size: 0.9em;
-    font-weight: bold;
-
-}
-
-#slide-8 .console {
-    position: absolute;
-    left:20px;
-    bottom: 75px;
-    width:475px;
-    text-align: left;
-    color: rgba(255, 255, 255, 0.7);
-}
+#slide-8 h3 { margin-bottom: 10px; }
 
 #slide-8 p {
     width: auto;
     margin-bottom:10px;
     color: rgba(255, 255, 255, 0.7);
 }
-
 
 /* Slide 9 */
 
@@ -786,7 +729,7 @@ video#bgvid {
     position:relative; 
     width:300px; 
     margin:auto;
-    margin-top: 50px;
+    margin-top: 70px;
 }
 
 #slide-9 .big-picture-copy h4 {
@@ -828,8 +771,8 @@ video#bgvid {
     background-image:url('../img/materials_kelp_1.jpg');   
 }
 
-#slide-9 .detection {
-    background-image:url('../img/materials_detection_1.jpg');   
+#slide-9 .uranium {
+    background-image:url('../img/materials_uranium_1.jpg');   
 }
 
 /* Slide 10 */
@@ -840,10 +783,24 @@ video#bgvid {
 }
 
 
-#slide-10 p {
+#slide-10-title p, #slide-10-title ul {
     width: 600px;
-    margin-bottom:50px;
-    color: rgba(255, 255, 255, 0.7);
+    margin-bottom:20px;
+    color: #fff;
+}
+
+#slide-10-title ul {
+    width: 500px;
+    margin:auto;
+    margin-bottom:20px;
+    color: #fff;
+    text-align: left;
+}
+
+#slide-10 .dialog {
+    position: absolute;
+    top: 72px;
+    left: 30px;    
 }
 
 /* Slide 11 */
@@ -853,12 +810,42 @@ video#bgvid {
      background-image:url('../img/concept_base_2.jpg');
 }
 
+#slide-11-copy {
+    width:900px;
+    margin:auto;
+    margin-bottom:30px;
+}
+
+#slide-11-copy p, #slide-11-copy img {
+    float:left;
+}
 
 #slide-11 p {
-    width: 600px;
-    margin-bottom:10px;
+    width: 350px;
+    margin-top:30px;
     color: rgba(255, 255, 255, 0.7);
+    text-align: left;
 }
+
+#bulkhead-gif {
+    border:1px solid #000;
+    margin-left:100px;
+}
+
+@media (max-width: 768px) { 
+    #bulkhead-gif {
+        display: none;
+    }
+    #slide-11-copy {
+        width:100%;
+    }
+    #slide-11 p {
+    width: 600px;
+    margin:auto;
+    text-align: center;
+}
+
+ }
 
 #flood-sim {
     width: 900px;
@@ -880,9 +867,21 @@ video#bgvid {
 
 #slide-12 p {
     margin-bottom:30px;
+    width: auto !important;
+    max-width: 600px;
     color: rgba(255, 255, 255, 0.7);
 }
 
+#slide-12 .dialog {
+    position: absolute;
+    bottom: 68px;
+    right: 30px;    
+    word-wrap:break-word;
+}
+
+#slide-12 .dialog p {
+    margin:auto;
+}
 
 .bcg {
     background-position: center center;
@@ -1050,6 +1049,31 @@ video#bgvid {
 
     .close-modal:hover { background: #00d9ff; }
 
+
+.console {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 0.9em;
+    text-align: left;
+    overflow-y:auto;
+}
+
+.console p {
+    width:auto;
+    margin-bottom: 10px;
+}
+
+.dialog {
+    max-height: 350px;
+    width: 300px;
+}
+
+
+@media (max-width: 768px) { 
+    .dialog {
+       display: none;
+    }
+
+}
 
 /* ==========================================================================
    Helper classes
