@@ -22,12 +22,14 @@
 	$body.imagesLoaded( function() {
 		setTimeout(function() {
 		      
-		      // Resize sections
 		      adjustWindow();
-		      
-		      // Init navigation
-		      initHomepageNav();
-		      
+
+		      winW = $window.width();
+
+		      if (winW >= 786) {
+		      	initHomepageNav();
+		      }
+		      		      
 		      // Fade in sections
 			  $body.removeClass('loading').addClass('loaded');
 			  
@@ -55,13 +57,18 @@
 		    
 		}
 
-	    if(winH <= 550) {
-			winH = 550;
+	    if(winH <= 575) {
+			winH = 575;
 		} 
 	    
 	    $slide.height(winH);
 	    $slideTall.height(winH*2);
 	    $slideTall2.height(winH*3);
+
+	    // Special cases are really fun and not at all irritating. DO IT
+	    if (winW >= 768) {
+	    	$('#slide-7').height(winH);
+	    }
 	    
 	   	if (s) {
 	   		s.refresh($('.homeSlide'));	

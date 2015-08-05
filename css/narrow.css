@@ -211,6 +211,8 @@ video#bgvid {
     -moz-border-radius: 5px;
     border-radius: 5px;
     color: #fff;
+    width:100%;
+    margin-bottom:20px;
 }
 
 .big-picture-copy h3 {
@@ -239,24 +241,26 @@ video#bgvid {
 #slide-1 #landing-content {
     position: relative;
     z-index: 1;
+    width: 100%;
 }
 
 #landing-content img {
     margin-bottom:20px;
+    width:100%;
 }
 
 #landing-console {
-    position: absolute;
-    left: 30px;
-    bottom: 30px;    
-    height: 350px;
-    width: 300px;
+    display:none;
 }
 
 
 #slide-1 p {
     color: rgba(255, 255, 255, 0.7);
 }
+
+#slide-1 .big-picture-copy {
+    width:100%;
+} 
 
 
 /* Slide 2 */
@@ -279,52 +283,13 @@ video#bgvid {
 .pda {
     position: relative;
     display: block;
-    width: 960px;
-    height: 630px;
-    background-image:url('../img/pda.png'); 
-    background-size: contain;
-    vertical-align: middle;
-    padding-left: 260px;
-    padding-right: 100px;
-    margin: auto;
-}
-
-@media (min-height: 601px) and (max-height: 768px), (max-width:768px) {
-    .pda {
-        width: 634px;
-        height: 416px;
-        padding-left: 170px;
-        padding-right: 60px;
-    }
-}
-
-@media (max-height: 600px) { 
-    .pda {
-        width: 550px;
-        height: 361px;
-        padding-left: 150px;
-        padding-right: 50px;
-    }
-
- }
-
-.trailer {
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-     -webkit-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.6);
-    -moz-box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.6);
-    box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.6);
+    width: auto;
+    height: auto;
+    
 }
 
 .sea-surface {
-    position: absolute;
-    width: 100%;
-    height:190px;
-    bottom:0px;
-    left:0px;
-    background-image:url('../img/sea_surface.png');
-    background-size: 100% 190px !important;
+    display:none;
 }
 
 /* Slide 3 */
@@ -357,110 +322,16 @@ video#bgvid {
 #base-diagram {
     position: relative;
     display: block;
-    width: 960px;
-    height: 500px;
-    background-image:url('../img/bases/base_diagram.png');
-    background-size: contain;
-    margin: auto;
-    top: 65%;
+    width: 100%;
+    height: auto;
+    margin-top:20px;
 }
 
 
 #base-arrows {
-    position: absolute;
-    top: -245px;
-    left: -360px;
+    display:none;
 }
 
-@media (min-height: 601px) and (max-height: 768px), (max-width:768px) {
-    #base-diagram {
-        width: 634px;
-        height: 330px;
-    }
-
-    #base-arrows {
-        width: 1109px;
-        height: 660px;
-        top: -160px;
-        left: -235px;
-    }
-
-    #base-glass {
-        top: 16px;
-        left: 75px;
-    }
-
-    #base-compartment {
-        top: 316px;
-        left: 159px;
-    }
-
-    #base-vertical {
-        top: 3px;
-        right: -12px;
-    }
-
-    #base-observatory {
-        top: 270px;
-        right: -70px;
-    }
-
-    #base-moonpool {
-        top: 254px;
-        left: 75px;
-    }
-}
-
-@media (max-height: 600px) { 
-    #base-diagram {
-        width: 550px;
-        height: 286px;
-    }
-
-    #base-arrows {
-        width: 958px;
-        height: 570px;
-        top: -140px;
-        left: -205px;
-    }
-
-    #base-glass {
-        top: 10px;
-        left: 45px;
-    }
-
-    #base-compartment {
-        top: 270px;
-        left: 110px;
-    }
-
-    #base-vertical {
-        top: -1px;
-        right: -25px;
-    }
-
-    #base-observatory {
-        top: 230px;
-        right: -70px;
-    }
-
-    #base-moonpool {
-        top: 214px;
-        left: 65px;
-    }
-
- }
-
- @media (max-width:768px) {
-    #base-diagram {
-        margin-left:-40px;
-    }
-}
-
-
-.base-diagram-copy {
-    position: absolute;
-}
 
 .base-diagram-copy h4 {
     text-transform: uppercase;
@@ -495,120 +366,24 @@ video#bgvid {
 #room-diagram {
     position: relative;
     display: block;
-    width: 960px;
-    height: 500px;
-    background-image:url('../img/bases/room_diagram.png');
-    background-size: contain;
-    margin: auto;
-    top: 65%;
+    width: 100%;
+    margin-top:20px;
 }
 
 #room-arrows {
-    position: absolute;
-    top: -245px;
-    left: -360px;
+    display:none;
 }
 
-@media (min-height: 601px) and (max-height: 768px), (max-width:768px) {
-    #room-diagram, #room-door  {
-        width: 634px;
-        height: 330px;
-    }
-
-    #room-door {
-        visibility: hidden;
-    }
-
-    #room-arrows {
-        width: 1109px;
-        height: 660px;
-        top: -160px;
-        left: -235px;
-    }
-
-    #utility-locker {
-        top: 68px;
-        left: -55px;
-    }
-
-    #utility-aquarium {
-        top: 300px;
-        left: -15px;
-    }
-
-    #utility-signs {
-        top: 97px;
-        right: -25px;
-    }
-
-    #utility-bench {
-        top: 237px;
-        right: -10px;
-    }
+#room-door {
+    display:none;
 }
 
-@media (max-height: 600px) { 
-    #room-diagram, #room-door  {
-        width: 550px;
-        height: 286px;
-    }
-
-    #room-door {
-        visibility: hidden;
-    }
-
-    #room-arrows {
-        width: 958px;
-        height: 570px;
-        top: -140px;
-        left: -205px;
-    }
-
-    #utility-locker {
-        top: 55px;
-        left: -75px;
-
-    }
-
-    #utility-aquarium {
-        top: 254px;
-        left: -35px;
-    }
-
-    #utility-signs {
-        top: 80px;
-        right: -30px;
-    }
-
-    #utility-bench {
-        top: 201px;
-        right: -15px;
-    }
-
- }
 
 
 /* Slide 6 */
 
 #slide-6 .bcg {background-image:url('../img/subnautica_moonpool_1.jpg')}
 
-#slide-6 .hsContent { vertical-align: top; }
-
-#slide-6 .big-picture-copy {  
-    margin:auto;
-    margin-top: 100px; 
-    width: 600px;
-}
-
-
-#slide-6 .console {
-    position: absolute;
-    left:20px;
-    bottom: 75px;
-    width:475px;
-    text-align: left;
-    color: rgba(255, 255, 255, 0.7);
-}
 
 #slide-6 h3 { margin-bottom: 10px; }
 }
@@ -627,9 +402,7 @@ video#bgvid {
 
 #slide-7 .power-copy {  
     position:relative; 
-    width:300px;
     background: 0;
-    float: left;
 }
 
 #slide-7 .power-copy h4 {
@@ -639,49 +412,14 @@ video#bgvid {
 
 }
 
-#slide-7 .power-icon-set {
-    float:right;
-    position:relative;
-    left:-50%;
-    margin-bottom:40px;
+#slide-7 .power-img{
+    width:75px;
+    height:75px;
 }
 
 #slide-7 .power-icon-set-inner {
-    position:relative;
-    left:50%;
+
 }
-
-@media (min-height: 601px) and (max-height: 768px), (max-width: 768px) {
-    .power-img  {
-        width: 100px;
-        height: 100px;
-    }
-}
-
-@media (max-height: 600px) { 
-    .power-img  {
-        width: 75px;
-        height: 75px;
-    }
-
-    #slide-7 .power-icon-set {
-        margin-bottom:0px;
-    }
-
- }
-
-
-@media (max-width: 1100px) { 
-    #slide-7 .power-copy {  
-        width: 250px;
-    }
- }
-
- @media (max-width: 768px) { 
-    #slide-7 .power-copy {  
-        width: 200px;
-    }
- }
 
 #slide-7 p {
     width: auto;
@@ -689,27 +427,13 @@ video#bgvid {
     color: rgba(255, 255, 255, 0.7);
 }
 
-#slide-7-title p {
-    width: 600px;
-}
-
 #slide-7 .dialog {
-    position: absolute;
-    right: 30px;
-    bottom: 30px;    
+    display:none; 
 }
 
 /* Slide 8 */
 
 #slide-8 .bcg {background-image:url('../img/subnautica_grandreef_1.jpg')}
-
-#slide-8 .hsContent { vertical-align: top; }
-
-#slide-8 .big-picture-copy {  
-    margin:auto;
-    margin-top: 100px; 
-    width: 600px;
-}
 
 #slide-8 h3 { margin-bottom: 10px; }
 
@@ -726,10 +450,13 @@ video#bgvid {
 #slide-9 .hsContent { vertical-align: bottom; }
 
 #slide-9 .big-picture-copy {  
-    position:relative; 
-    width:300px; 
+    position:relative;  
     margin:auto;
-    margin-top: 70px;
+    width:100%;
+    height:100%;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
 }
 
 #slide-9 .big-picture-copy h4 {
@@ -749,19 +476,14 @@ video#bgvid {
 }
 
 .img-col-3 {
-    height:100%;
-    width:33.333%;
+    width:100%;
+    height:33.333%;
     background-size: cover;
     background-position: center;
     text-align:center;
     float:left;
 }
 
-@media (max-width: 950px) { 
-    #slide-9 .big-picture-copy {   
-        width:200px; 
-    }
-}
 
 #slide-9 .magnetite {
     background-image:url('../img/materials_magnetite_1.jpg');   
@@ -784,18 +506,14 @@ video#bgvid {
 
 
 #slide-10-title p, #slide-10-title ul {
-    width: 600px;
+    width: 100%;
     margin-bottom:20px;
     color: #fff;
-}
-
-#base-flood-vid {
-    max-width: 640px;
-    margin: auto;
+    font-size: 0.9em;
 }
 
 #slide-10-title ul {
-    width: 500px;
+    width: 100%px;
     margin:auto;
     margin-bottom:20px;
     color: #fff;
@@ -816,17 +534,14 @@ video#bgvid {
 }
 
 #slide-11-copy {
-    width:900px;
+    width:100%;
     margin:auto;
     margin-bottom:30px;
 }
 
-#slide-11-copy p, #slide-11-copy img {
-    float:left;
-}
 
 #slide-11 p {
-    width: 350px;
+    width: 100%;
     margin-top:30px;
     color: rgba(255, 255, 255, 0.7);
     text-align: left;
@@ -834,29 +549,12 @@ video#bgvid {
 
 #bulkhead-gif {
     border:1px solid #000;
-    margin-left:100px;
+    max-width: 80%;
 }
 
-@media (max-width: 768px) { 
-    #bulkhead-gif {
-        display: none;
-    }
-    #slide-11-copy {
-        width:100%;
-    }
-    #slide-11 p {
-    width: 600px;
-    margin:auto;
-    text-align: center;
-}
-
- }
 
 #flood-sim {
-    width: 900px;
-    height: 430px;
-    margin: auto;
-    margin-top: 40px;
+    display:none;
 }
 
 /* Slide 12 */
@@ -930,8 +628,6 @@ video#bgvid {
 		margin-bottom: 12px;
 	}
 	.hsContent p {
-		width: 600px;
-		margin: 0 auto;
 		color: #252525;
 	}
 	.hsContent a {
@@ -972,21 +668,13 @@ video#bgvid {
     }
 
     .mail-list-form {
-        width:60%;
-        min-width: 300px;
+        width:80%;
         margin: 0 auto;
     }
 
 
     .footer {
-        position: absolute;
-        width: 100%;
-        bottom:0px;
-        left:0px;
-    }
-
-    .footer p {
-        width:auto;
+        display: none;
     }
 
     /* MODAL BOXES */
@@ -1012,18 +700,13 @@ video#bgvid {
     }
 
     .modalDialog > div {
-        width: 600px;
+        width:80%;
+        height:80%;
         position: relative;
-        margin: 15% auto;
+        margin:20% auto;
         padding: 5px 20px 13px 20px;
         border-radius: 5px;
         background-color: rgba(50,50,50,0.80);
-    }
-
-    @media (max-height: 600px) { 
-        .modalDialog > div {
-            margin: 7.5% auto;
-        }
     }
 
     .modalDialog p {
@@ -1031,6 +714,7 @@ video#bgvid {
     }
 
      .modalDialog img {
+        max-width: 90%;
         border: 1px solid #000;
         margin-top:20px;
         margin-bottom: 20px;
