@@ -178,9 +178,6 @@ section {
     border-bottom: 3px solid #CE9800;
 }
 
-main {
-	overflow-x: hidden;
-}
 
 h3 {
     font-size: 30px;
@@ -764,6 +761,7 @@ video#bgvid {
 }
 
 .img-col-3 {
+    display:inline-table;
     height:100%;
     width:33.333%;
     background-size: cover;
@@ -884,7 +882,7 @@ video#bgvid {
 }
 
 #flood-sim {
-    width: 790px;
+    width: 800px;
     height: 350px;
     margin: auto;
     margin-top: 40px;
@@ -1057,6 +1055,11 @@ video#bgvid {
         text-align: left;
     }
 
+    .dialogDialog .scrollme {
+        height:100%;
+        overflow-y:auto;
+    }
+
     .dialogDialog p {
         margin-top:10px;
         margin-bottom:10px;
@@ -1066,6 +1069,10 @@ video#bgvid {
     @media (max-height: 600px) { 
         .modalDialog > div {
             margin: 7.5% auto;
+        }
+
+        .scrollhim {
+            height:80%;
         }
     }
 
