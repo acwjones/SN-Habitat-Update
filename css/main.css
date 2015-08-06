@@ -1071,11 +1071,17 @@ video#bgvid {
             margin: 7.5% auto;
         }
 
+        
+    }
+
+    @media (max-height: 768px) { 
+        .modalDialog > div {
+            margin: 7.5% auto;
+        }
         .scrollhim {
             height:80%;
         }
     }
-
     .modalDialog p {
         width:auto;
     }
