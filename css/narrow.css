@@ -356,8 +356,18 @@ video#bgvid {
 /* Slide 4 */
 
 #slide-4 .bcg { 
+    background: #e7ffff;
     background-image:url('../img/subnautica_kelp_base_2.jpg');
-     background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    -webkit-background-size: 100%; 
+    -moz-background-size: 100%; 
+    -o-background-size: 100%; 
+    background-size: 100%; 
+    -webkit-background-size: cover; 
+    -moz-background-size: cover; 
+    -o-background-size: cover; 
+    background-size: cover; 
 }
 
 #slide-4 .dialog {
@@ -369,8 +379,13 @@ video#bgvid {
 
 /* Slide 5 */
 #slide-5 .bcg {
+    background: #e7ffff;
     background-image:url('../img/concept_grandreef_1.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
     background-size: cover;
+    height: 100%;
+    width: 100%;
 }
 
 #slide-5 h2 {
@@ -401,8 +416,13 @@ video#bgvid {
 /* Slide 6 */
 
 #slide-6 .bcg {
+    background: #e7ffff;
     background-image:url('../img/subnautica_moonpool_1.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
     background-size: cover;
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -418,7 +438,13 @@ video#bgvid {
 /* Slide 7 */
 #slide-7 { position: relative; }
 #slide-7 .bcg {
-    background-image:url('../img/sea_background_2.jpg')
+    background: #e7ffff;
+    background-image:url('../img/sea_background_2.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
 }
 
 #slide-7 .power-copy {  
@@ -455,8 +481,13 @@ video#bgvid {
 /* Slide 8 */
 
 #slide-8 .bcg {
+    background: #e7ffff;
     background-image:url('../img/subnautica_grandreef_1.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
     background-size: cover;
+    height: 100%;
+    width: 100%;
 }
 
 #slide-8 h3 { margin-bottom: 10px; }
@@ -525,7 +556,13 @@ video#bgvid {
 
 #slide-10 { position: relative; }
 #slide-10 .bcg { 
+    background: #e7ffff;
     background-image:url('../img/concept_base_1.jpg');   
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
 }
 
 
@@ -554,8 +591,13 @@ video#bgvid {
 
 #slide-11 { position: relative; }
 #slide-11 .bcg { 
-     background-image:url('../img/concept_base_2.jpg');
-     background-size: cover;
+    background: #e7ffff;
+    background-image:url('../img/concept_base_2.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
 }
 
 #slide-11-copy {
@@ -585,8 +627,13 @@ video#bgvid {
 /* Slide 12 */
 
 #slide-12 .bcg {
+    background: #000;
     background-image:url('../img/subnautica_emperor_1.jpg');
+    background-position: center center;
+    background-repeat: no-repeat;
     background-size: cover;
+    height: 100%;
+    width: 100%;
     text-align: center;
 }
 
