@@ -376,6 +376,12 @@ video#bgvid {
     top: 82px;    
 }
 
+#slide-4 .log {
+    position: absolute;
+    top: 12%;
+    left: 5%;
+}
+
 
 /* Slide 5 */
 #slide-5 .bcg {
